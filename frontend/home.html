@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/home.css" />
+    <script src="script/carousel.js"></script>
     <script src="script/home.js"></script>
     <title>Home</title>
   </head>
 
   <body>
-    <div class="hero">
+    <section class="hero">
       <nav>
         <h2 class="logo">Atrons</h2>
         <ul>
@@ -19,13 +20,34 @@
           </button> -->
           <li><a href="#">Home</a></li>
           <li><a href="#">Categories</a></li>
-          <li><a href="#">Shop</a></li>
           <li><a href="#">Pages</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Others</a></li>
+          <li><a href="#">About</a></li>
+          <li></li>
         </ul>
-        <button type="button">Subscribe</button>
+
+        <div class="search-wrapper">
+          <input
+            class="search-bar"
+            type="text"
+            placeholder="Search by Keywords"
+          />
+          <button class="search-btn" type="button">Search</button>
+        </div>
       </nav>
-    </div>
+    </section>
+
+    <section class="featured-books">
+      <h1>Featured Books of <span id="month">June</span></h1>
+
+      <div class="carousel">
+        <ul class="carousel__list">
+          <li class="carousel__item" data-pos="-2">1</li>
+          <li class="carousel__item" data-pos="-1">2</li>
+          <li class="carousel__item" data-pos="0">3</li>
+          <li class="carousel__item" data-pos="1">4</li>
+          <li class="carousel__item" data-pos="2">5</li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
