@@ -77,9 +77,13 @@ nav ul li a:hover {
 
 .featured-books {
   display: flex;
-  border: 1px solid red;
-  margin: 10vh 0vw;
-  padding: 10vh 15vw;
+  /* border: 1px solid red; */
+  margin: 8vh 5vw;
+  /* padding: 5vh 5vw; */
+}
+
+.featured-books > h1 {
+  padding: 7vw;
 }
 
 #month {
@@ -90,10 +94,11 @@ nav ul li a:hover {
 /* carousel */
 .carousel {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   align-items: center;
   font-family: Arial;
+  padding-right: 5vw;
 }
 
 .carousel__list {
@@ -176,4 +181,70 @@ nav ul li a:hover {
 .carousel__item[data-pos="2"] {
   transform: translateX(70%) scale(0.8);
   z-index: 3;
+}
+
+/* best selling boooks */
+.bestselling-books {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.card {
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-content {
+  margin-top: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-author {
+  font-size: 14px;
+  color: #777;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }

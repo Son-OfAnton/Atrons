@@ -11,35 +11,31 @@
   </head>
 
   <body>
-    <section class="hero">
-      <nav>
-        <h2 class="logo">Atrons</h2>
-        <ul>
-          <!-- <button id="hamburger">
-            <img src="/frontend/assets/hamburger.png" alt="Menu Icon" />
-          </button> -->
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">About</a></li>
-          <li></li>
-        </ul>
+    <nav>
+      <h1 class="logo">Atrons</h1>
 
-        <div class="search-wrapper">
-          <input
-            class="search-bar"
-            type="text"
-            placeholder="Search by Keywords"
-          />
-          <button class="search-btn" type="button">Search</button>
-        </div>
-      </nav>
-    </section>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">About</a></li>
+        <li></li>
+      </ul>
+
+      <div class="search-wrapper">
+        <input
+          class="search-bar"
+          type="text"
+          placeholder="Search by Keywords"
+        />
+        <button class="search-btn" type="button">Search</button>
+      </div>
+    </nav>
 
     <section class="featured-books">
-      <h1>Featured Books of <span id="month">June</span></h1>
+      <h1>Featured Books of <br /><span id="month">June</span></h1>
 
-      <div class="carousel">
+      <section class="carousel">
         <ul class="carousel__list">
           <li class="carousel__item" data-pos="-2">1</li>
           <li class="carousel__item" data-pos="-1">2</li>
@@ -47,6 +43,119 @@
           <li class="carousel__item" data-pos="1">4</li>
           <li class="carousel__item" data-pos="2">5</li>
         </ul>
+      </section>
+    </section>
+
+    <section class="bestselling-books">
+      <h1>Bestselling Books</h1>
+
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="/frontend/assets/book.jpeg"
+            alt="Book 1"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">Book Title 1</h3>
+            <p class="card-author">Author 1</p>
+            <p class="card-price">$9.99</p>
+            <div class="card-buttons">
+              <button>
+                <img src="/frontend/assets/cart.png" alt="" />
+              </button>
+              <button>
+                <img src="/frontend/assets/white-heart.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="/frontend/assets/book.jpeg"
+            alt="Book 2"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">Book Title 2</h3>
+            <p class="card-author">Author 2</p>
+            <p class="card-price">$12.99</p>
+            <div class="card-buttons">
+              <button>
+                <img src="/frontend/assets/cart.png" alt="" />
+              </button>
+              <button>
+                <img src="/frontend/assets/white-heart.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="/frontend/assets/book.jpeg"
+            alt="Book 3"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">Book Title 3</h3>
+            <p class="card-author">Author 3</p>
+            <p class="card-price">$12.99</p>
+            <div class="card-buttons">
+              <button>
+                <img src="/frontend/assets/cart.png" alt="" />
+              </button>
+              <button>
+                <img src="/frontend/assets/white-heart.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="/frontend/assets/book.jpeg"
+            alt="Book 4"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">Book Title 4</h3>
+            <p class="card-author">Author 4</p>
+            <p class="card-price">$12.99</p>
+
+            <div class="card-buttons">
+              <button>
+                <img src="/frontend/assets/cart.png" alt="" />
+              </button>
+              <button>
+                <img src="/frontend/assets/white-heart.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="/frontend/assets/book.jpeg"
+            alt="Book 5"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">Book Title 5</h3>
+            <p class="card-author">Author 5</p>
+            <p class="card-price">$12.99</p>
+
+            <div class="card-buttons">
+              <button>
+                <img src="/frontend/assets/cart.png" alt="" />
+              </button>
+              <button>
+                <img src="/frontend/assets/white-heart.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </body>
