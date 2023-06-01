@@ -45,6 +45,41 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
+/* drop mega menu */
+
+.mega-menu {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  max-width: 500px;
+  margin-left: 300px;
+  background-color: #f0f0f0;
+}
+
+.drop-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 10px;
+}
+
+.mega-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.mega-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.mega-menu ul li:hover a,
+.mega-menu ul li:hover {
+  background-color: #ea1538;
+  color: white;
+}
+
 /* search related */
 
 .search-btn {
@@ -56,12 +91,13 @@ nav ul li a:hover {
   font-weight: bold;
   font-size: 15px;
   transition: 0.4s;
-}
-
-.search-btn:hover {
-  transform: scale(1.1);
   cursor: pointer;
 }
+
+/* .search-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+} */
 
 .search-bar {
   font-size: medium;
@@ -77,12 +113,13 @@ nav ul li a:hover {
 
 .featured-books {
   display: flex;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   margin: 8vh 5vw;
   /* padding: 5vh 5vw; */
 }
 
 .featured-books > h1 {
+  font-size: xx-large;
   padding: 7vw;
 }
 
@@ -185,21 +222,28 @@ nav ul li a:hover {
 
 /* best selling boooks */
 .bestselling-books {
+  margin-top: 8vh;
   margin-left: 5vw;
   margin-right: 5vw;
+  border: 1px solid red;
+}
+
+.bestselling-books h1 {
+  font-size: xx-large;
+  margin-bottom: 20px;
 }
 
 .card-container {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .card {
   width: 200px;
   border-radius: 5px;
   padding: 10px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .card-image {
@@ -247,4 +291,71 @@ nav ul li a:hover {
   font-size: 16px;
   font-weight: bold;
   color: #333;
+}
+
+/* Footer */
+footer {
+  /* text-align: center; */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid red;
+  margin-top: 8vh;
+  /* margin: 8vh 5vw; */
+}
+
+footer h1 {
+  font-size: xx-large;
+  padding-left: 3vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.centered {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.centered p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.links {
+  margin-top: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.links ul li img {
+  width: 5vh;
+  height: 5vh;
+}
+
+.links li {
+  margin-right: 30px;
+}
+
+.links li:last-child {
+  margin-right: 0;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links img {
+  width: 20px;
+  height: 20px;
 }

@@ -1,0 +1,26 @@
+.mega-menu {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.drop-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.mega-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.mega-menu ul li a:hover {
+  color: red;
+}
