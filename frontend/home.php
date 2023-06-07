@@ -4,38 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/home.css" />
-    <script src="script/carousel.js"></script>
-    <script src="script/home.js"></script>
     <title>Home</title>
+    <link rel="stylesheet" href="style/home.css" />
   </head>
 
   <body>
+    <div class="nav-icons">
+      <!-- <a href="#">
+        <img class="nav-svgs" src="assets/cart.svg" />
+      </a>
+      <a href="#">
+        <img class="nav-svgs" src="assets/red-heart.svg" />
+      </a> -->
+      <a href="#">
+        <img class="nav-svgs" src="assets/person.svg" />
+      </a>
+    </div>
     <nav>
-      <h1 class="logo">Atrons</h1>
+      <div class="wrapper">
+        <div class="top-nav">
+          <div class="logo-title">
+            <img class="logo" src="assets/book.svg" alt="" />
+            <h1 class="title">Atrons</h1>
+          </div>
+          <div class="search-wrapper">
+            <input
+              class="search-bar"
+              type="text"
+              placeholder="Search by Keywords"
+            />
+            <button class="search-btn" type="button">Search</button>
+          </div>
+        </div>
+        <ul class="nav-list">
+          <li id="home">
+            <a href="#">Home</a>
+          </li>
 
-      <ul>
-        <li id="home">
-          <a href="#">Home</a>
-        </li>
-        <li id="categories">
-          <a href="#">Categories</a>
-        </li>
-        <li id="wishlist">
-          <a href="#">Wishlist</a>
-        </li>
-        <li id="cart">
-          <a href="#">Cart</a>
-        </li>
-      </ul>
+          <li id="categories">
+            <a href="#">Categories</a>
+          </li>
 
-      <div class="search-wrapper">
-        <input
-          class="search-bar"
-          type="text"
-          placeholder="Search by Keywords"
-        />
-        <button class="search-btn" type="button">Search</button>
+          <li id="wishlist">
+            <a href="#">Wishlist</a>
+          </li>
+
+          <li id="cart">
+            <a href="#">Cart</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="mega-menu">
@@ -89,10 +106,14 @@
             <p class="card-price">$9.99</p>
             <div class="card-buttons">
               <button>
-                <img src="/frontend/assets/cart.png" alt="" />
+                <img class="svgs" src="/frontend/assets/cart.svg" alt="" />
               </button>
               <button>
-                <img src="/frontend/assets/white-heart.png" alt="" />
+                <img
+                  class="svgs"
+                  src="/frontend/assets/white-heart.svg"
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -110,10 +131,14 @@
             <p class="card-price">$12.99</p>
             <div class="card-buttons">
               <button>
-                <img src="/frontend/assets/cart.png" alt="" />
+                <img class="svgs" src="/frontend/assets/cart.svg" alt="" />
               </button>
               <button>
-                <img src="/frontend/assets/white-heart.png" alt="" />
+                <img
+                  class="svgs"
+                  src="/frontend/assets/white-heart.svg"
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -131,10 +156,14 @@
             <p class="card-price">$12.99</p>
             <div class="card-buttons">
               <button>
-                <img src="/frontend/assets/cart.png" alt="" />
+                <img class="svgs" src="/frontend/assets/cart.svg" alt="" />
               </button>
               <button>
-                <img src="/frontend/assets/white-heart.png" alt="" />
+                <img
+                  class="svgs"
+                  src="/frontend/assets/white-heart.svg"
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -153,10 +182,14 @@
 
             <div class="card-buttons">
               <button>
-                <img src="/frontend/assets/cart.png" alt="" />
+                <img class="svgs" src="/frontend/assets/cart.svg" alt="" />
               </button>
               <button>
-                <img src="/frontend/assets/white-heart.png" alt="" />
+                <img
+                  class="svgs"
+                  src="/frontend/assets/white-heart.svg"
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -175,10 +208,14 @@
 
             <div class="card-buttons">
               <button>
-                <img src="/frontend/assets/cart.png" alt="" />
+                <img class="svgs" src="/frontend/assets/cart.svg" alt="" />
               </button>
               <button>
-                <img src="/frontend/assets/white-heart.png" alt="" />
+                <img
+                  class="svgs"
+                  src="/frontend/assets/white-heart.svg"
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -200,27 +237,29 @@
           <ul>
             <li>
               <a href="#">
-                <img src="/frontend/assets/instagram.png" alt="" />
+                <img src="/frontend/assets/instagram.svg" alt="" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="/frontend/assets/youtube.png" alt="" />
+                <img src="/frontend/assets/youtube.svg" alt="" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="/frontend/assets/telegram.png" alt="" />
+                <img src="/frontend/assets/telegram.svg" alt="" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="/frontend/assets/twitter.png" alt="" />
+                <img src="/frontend/assets/facebook.svg" alt="" />
               </a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
+    <script src="script/carousel.js"></script>
+    <script src="script/home.js"></script>
   </body>
 </html>
