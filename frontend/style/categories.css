@@ -11,6 +11,10 @@ body {
   position: relative;
 }
 
+:root {
+  --main-color: var(#ea1538);
+}
+
 nav {
   /* border: 1px solid red; */
   display: flex;
@@ -57,7 +61,7 @@ nav {
 }
 
 .title {
-  color: #ea1538;
+  color: var(--main-color);
   font-size: 35px;
   margin-top: 5px;
 }
@@ -82,7 +86,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ea1538;
+  color: var(--main-color);
   transition: 0.3s;
 }
 
@@ -148,47 +152,75 @@ nav ul li a:hover {
 
 .sidebar ul li:hover a,
 .sidebar ul li:hover {
-  background-color: #ea1538;
+  background-color: var(--main-color);
   color: white;
   padding: 10px;
 }
 
-/* product grid */
+/* book grid */
 
-.bestselling-books {
-  margin-top: 8vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  border: 1px solid red;
-}
-
-.bestselling-books h1 {
-  font-size: xx-large;
-  margin-bottom: 20px;
+.card-grid {
+  margin: 30px 0 0 50px;
 }
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 0.3fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* border: 1px solid red; */
+  margin-top: 10px;
 }
 
 @media (min-width: 1200px) {
   .card-container {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 960px) {
+  .card-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 959px) and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) and (min-width: 320px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 319px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 .card {
   width: 150px;
   border-radius: 5px;
-  border: 1px solid red;
+  margin-bottom: 20px;
 }
 
 .card-image {
   width: 100%;
   height: auto;
   border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-image {
+  transform: scale(1.1);
 }
 
 .card-content {
@@ -201,10 +233,18 @@ nav ul li a:hover {
 }
 
 .card-buttons {
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 10px;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-buttons {
+  visibility: visible;
+  opacity: 1;
 }
 
 .card-buttons button {
@@ -212,6 +252,7 @@ nav ul li a:hover {
   outline: none;
   background-color: transparent;
   flex: 1;
+  cursor: pointer;
 }
 
 .card-title {

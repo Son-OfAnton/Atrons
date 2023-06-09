@@ -7,12 +7,9 @@
   font-family: "Karla";
 }
 
-/* navbar */
-
-/* .hero {
-  height: 100vh;
-  width: 100%;
-} */
+:root {
+  --main-color: #ea1538;
+}
 
 body {
   position: relative;
@@ -64,7 +61,7 @@ nav {
 }
 
 .title {
-  color: #ea1538;
+  color: var(--main-color);
   font-size: 35px;
   margin-top: 5px;
 }
@@ -89,7 +86,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ea1538;
+  color: var(--main-color);
   transition: 0.3s;
 }
 
@@ -104,6 +101,7 @@ nav ul li a:hover {
   max-width: 500px;
   margin-left: 300px;
   background-color: white;
+  z-index: 1;
 }
 
 .drop-menu {
@@ -126,7 +124,7 @@ nav ul li a:hover {
 
 .mega-menu ul li:hover a,
 .mega-menu ul li:hover {
-  background-color: #ea1538;
+  background-color: var(--main-color);
   color: white;
 }
 
@@ -134,7 +132,7 @@ nav ul li a:hover {
 
 .search-btn {
   border: none;
-  background: #ea1538;
+  background: var(--main-color);
   padding: 12px 20px;
   border-radius: 30px;
   color: white;
@@ -143,11 +141,6 @@ nav ul li a:hover {
   transition: 0.4s;
   cursor: pointer;
 }
-
-/* .search-btn:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-} */
 
 .search-bar {
   font-size: medium;
@@ -165,12 +158,15 @@ nav ul li a:hover {
   display: flex;
   border: 1px solid red;
   margin: 8vh 5vw;
+  flex-direction: row;
+  justify-content: space-evenly;
   /* padding: 5vh 5vw; */
 }
 
 .featured-books > h1 {
   font-size: xx-large;
-  padding: 7vw;
+  padding-top: 17vh;
+  padding-left: 3vw;
 }
 
 #month {
@@ -178,96 +174,52 @@ nav ul li a:hover {
   font-weight: 800;
 }
 
-/* carousel */
-.carousel {
-  display: flex;
-  width: 50%;
-  height: 50%;
-  align-items: center;
-  font-family: Arial;
-  padding-right: 5vw;
+/* slider */
+
+#slider {
+  overflow: hidden;
+  max-width: 200px;
+  max-height: 100%;
 }
 
-.carousel__list {
-  border: 1px solid blue;
-  display: flex;
-  list-style: none;
+#slider figure {
   position: relative;
-  width: 100%;
-  height: 300px;
-  margin-left: 30vw;
-  justify-content: center;
-  perspective: 300px;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 15s slider infinite;
 }
 
-.carousel__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 0px;
-  width: 200px;
-  height: 300px;
-  border-radius: 12px;
-  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
-  position: absolute;
-  transition: all 0.3s ease-in;
+#slider figure img {
+  float: left;
+  width: 20%;
 }
 
-.carousel__item:nth-child(1) {
-  background: linear-gradient(45deg, #2d35eb 0%, #904ed4 100%);
-}
-
-.carousel__item:nth-child(2) {
-  background: linear-gradient(45deg, #2d35eb 0%, #fdbb2d 100%);
-}
-
-.carousel__item:nth-child(3) {
-  background: linear-gradient(45deg, #2d35eb 0%, #22c1c3 100%);
-}
-
-.carousel__item:nth-child(4) {
-  background: linear-gradient(45deg, #fdbb2d 0%, #904ed4 100%);
-}
-
-.carousel__item:nth-child(5) {
-  background: linear-gradient(45deg, #22c1c3 0%, #904ed4 100%);
-}
-
-.carousel__item[data-pos="0"] {
-  z-index: 5;
-}
-
-.carousel__item[data-pos="-1"],
-.carousel__item[data-pos="1"] {
-  opacity: 0.7;
-  filter: blur(1px) grayscale(10%);
-}
-
-.carousel__item[data-pos="-1"] {
-  transform: translateX(-40%) scale(0.9);
-  z-index: 4;
-}
-
-.carousel__item[data-pos="1"] {
-  transform: translateX(40%) scale(0.9);
-  z-index: 4;
-}
-
-.carousel__item[data-pos="-2"],
-.carousel__item[data-pos="2"] {
-  opacity: 0.4;
-  filter: blur(3px) grayscale(20%);
-}
-
-.carousel__item[data-pos="-2"] {
-  transform: translateX(-70%) scale(0.8);
-  z-index: 3;
-}
-
-.carousel__item[data-pos="2"] {
-  transform: translateX(70%) scale(0.8);
-  z-index: 3;
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
 }
 
 /* best selling boooks */

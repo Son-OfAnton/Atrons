@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla";
+}
+
+body {
+  position: relative;
+}
+
+:root {
+  --main-color: var(#ea1538);
+}
+
+/* navbar */
+
+nav {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.nav-icons {
+  display: flex;
+  /* margin: 10px 10px 10px; */
+  margin: 8vh 5vw 0 5vw;
+  padding-left: 10vw;
+  column-gap: 3vw;
+  justify-content: end;
+}
+
+.nav-svgs {
+  width: 40px;
+  height: 40px;
+}
+
+.svgs {
+  width: 24px;
+  height: 24px;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+  margin-bottom: 40px;
+  /* justify-content: space-between; */
+}
+
+.logo-title {
+  display: inline-flex;
+}
+
+.logo {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.title {
+  color: var(--main-color);
+  font-size: 35px;
+  margin-top: 5px;
+}
+
+.nav-list {
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 90px;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+/* main */
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* search related */
+
+.search-btn {
+  border: none;
+  background: #ea1538;
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.search-bar {
+  font-size: medium;
+  outline: none;
+  color: #686868;
+  border: 1px solid rgb(197, 191, 191);
+  padding: 12px 20px;
+  border-radius: 30px;
+  width: 350px;
+}
+
+/* book details*/
+
+.book-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-height: 300px;
+  /* border: 1px solid red; */
+  margin-bottom: 300px;
+}
+
+@media (min-width: 768px) {
+  .book-wrapper {
+    max-width: 800px;
+  }
+}
+
+.book-cover-container {
+  max-width: 300px;
+  max-height: auto;
+}
+
+.book-cover {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding-left: 100px;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.book-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.book-author {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.book-price {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.book-description {
+  width: 100%;
+  line-height: 1.5;
+}
+
+.cart-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-width 0.3s ease;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: #ea1538;
+  color: white;
+}
+
+/* footer */
+
+footer {
+  /* text-align: center; */
+  background-color: #f0f0f0;
+  padding: 20px;
+  /* border: 1px solid red; */
+  margin-top: 8vh;
+  /* margin: 8vh 5vw; */
+}
+
+footer h1 {
+  font-size: xx-large;
+  padding-left: 3vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.centered {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.centered p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.links {
+  margin-top: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.links ul li img {
+  width: 5vh;
+  height: 5vh;
+}
+
+.links li {
+  margin-right: 30px;
+}
+
+.links li:last-child {
+  margin-right: 0;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  footer h1 {
+    text-align: center;
+  }
+}
