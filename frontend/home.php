@@ -29,7 +29,7 @@
           <h1 class="title">Atrons</h1>
         </div>
         <div class="search-wrapper">
-          <input class="search-bar" type="text" placeholder="Search by Keywords" />
+          <input class="search-bar" type="text" placeholder="Search By Title Or Author" />
           <button class="search-btn" type="button">Search</button>
         </div>
       </div>
@@ -98,12 +98,13 @@
           <p class="card-author">Author 1</p>
           <p class="card-price">$9.99</p>
           <div class="card-buttons">
-            <button>
+            <!-- <button>
               <img class="svgs" src="assets/cart.svg" alt="" />
             </button>
             <button>
               <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button>
+            </button> -->
+            <button class="cart-btn">Add to cart</button>
           </div>
         </div>
       </div>
@@ -115,12 +116,13 @@
           <p class="card-author">Author 2</p>
           <p class="card-price">$12.99</p>
           <div class="card-buttons">
-            <button>
+            <!-- <button>
               <img class="svgs" src="assets/cart.svg" alt="" />
             </button>
             <button>
               <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button>
+            </button> -->
+            <button class="cart-btn">Add to cart</button>
           </div>
         </div>
       </div>
@@ -132,12 +134,13 @@
           <p class="card-author">Author 3</p>
           <p class="card-price">$12.99</p>
           <div class="card-buttons">
-            <button>
+            <!-- <button>
               <img class="svgs" src="assets/cart.svg" alt="" />
             </button>
             <button>
               <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button>
+            </button> -->
+            <button class="cart-btn">Add to cart</button>
           </div>
         </div>
       </div>
@@ -150,12 +153,13 @@
           <p class="card-price">$12.99</p>
 
           <div class="card-buttons">
-            <button>
+            <!-- <button>
               <img class="svgs" src="assets/cart.svg" alt="" />
             </button>
             <button>
               <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button>
+            </button> -->
+            <button class="cart-btn">Add to cart</button>
           </div>
         </div>
       </div>
@@ -168,11 +172,13 @@
           <p class="card-price">$12.99</p>
 
           <div class="card-buttons">
-            <button>
+            <!-- <button>
               <img class="svgs" src="assets/cart.svg" alt="" />
             </button>
             <button>
               <img class="svgs" src="assets/white-heart.svg" alt="" />
+            </button> -->
+            <button class="cart-btn">Add to cart</button>
             </button>
           </div>
         </div>

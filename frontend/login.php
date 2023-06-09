@@ -29,7 +29,7 @@
             </div>
             <button class="login-btn">LOGIN</button>
             <div class="create">
-                <a href="#">Create Your Account</a>
+                <a href="#">Create new account</a>
             </div>
         </div>
     </div>

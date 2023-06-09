@@ -156,7 +156,7 @@ nav ul li a:hover {
 
 .featured-books {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 8vh 5vw;
   flex-direction: row;
   justify-content: space-evenly;
@@ -227,7 +227,7 @@ nav ul li a:hover {
   margin-top: 8vh;
   margin-left: 5vw;
   margin-right: 5vw;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .bestselling-books h1 {
@@ -256,7 +256,7 @@ nav ul li a:hover {
 .card {
   width: 200px;
   border-radius: 5px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .card-image {
@@ -278,13 +278,13 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .card-buttons button {
   border: none;
   outline: none;
-  background-color: transparent;
+  /* background-color: transparent; */
   flex: 1;
 }
 
@@ -304,13 +304,40 @@ nav ul li a:hover {
   color: #333;
 }
 
+.cart-icon {
+  display: inline;
+  width: 24px;
+  height: 24px;
+}
+
+.cart-btn {
+  /* background-color: white;
+  color: black; */
+  background-color: #ea1538;
+  color: white;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-width 0.3s ease;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* .cart-btn:hover {
+  background-color: #ea1538;
+  color: white;
+} */
+
 /* Footer */
 
 footer {
   /* text-align: center; */
   background-color: #f0f0f0;
   padding: 20px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 8vh;
   /* margin: 8vh 5vw; */
 }

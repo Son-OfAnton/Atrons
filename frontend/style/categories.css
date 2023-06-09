@@ -152,7 +152,7 @@ nav ul li a:hover {
 
 .sidebar ul li:hover a,
 .sidebar ul li:hover {
-  background-color: var(--main-color);
+  background-color: #ea1538;
   color: white;
   padding: 10px;
 }
@@ -210,6 +210,7 @@ nav ul li a:hover {
   width: 150px;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .card-image {
@@ -233,25 +234,41 @@ nav ul li a:hover {
 }
 
 .card-buttons {
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden; */
+  /* opacity: 0; */
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 10px;
-  transition: visibility 0s, opacity 0.3s ease-in-out;
+  /* margin-top: 10px; */
+  /* transition: visibility 0s, opacity 0.3s ease-in-out; */
 }
 
-.card:hover .card-buttons {
+/* .card:hover .card-buttons {
   visibility: visible;
   opacity: 1;
-}
+} */
 
 .card-buttons button {
   border: none;
   outline: none;
-  background-color: transparent;
+  /* background-color: transparent; */
   flex: 1;
+  cursor: pointer;
+}
+
+.cart-btn {
+  /* background-color: white;
+  color: black; */
+  background-color: #ea1538;
+  color: white;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-width 0.3s ease;
+  margin-top: 20px;
   cursor: pointer;
 }
 
