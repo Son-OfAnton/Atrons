@@ -30,11 +30,12 @@ class User
     // get single user by email
     public function get_single_user()
     {
-        $query = 'SELECT * FROM ' . $this->table . ' WHERE email = ?';
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE email = ? and password= ?';
         $stmt = $this->conn->prepare($query);
 
-        // bind user_id
+        // bind user_id and password
         $stmt->bindParam(1, $this->user_id);
+        $stmt->bindParam(2, $this->password);
         $stmt->execute();
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -47,7 +48,7 @@ class User
             $user->password = $row['password'];
             $user->gender = $row['gender'];
             $user->phone = $row['phone'];
-
+            
             return $user;
         } else {
             return null; // User not found
