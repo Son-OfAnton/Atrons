@@ -1,6 +1,6 @@
 // Function to make the API request and display the results
 function getUsers() {
-  fetch("http://localhost/Atrons/backend/api/user/read.php")
+  fetch("http://localhost/Atrons/backend/api/book/read.php")
     .then((response) => response.json())
     .then((data) => {
       if (data.message) {
@@ -11,7 +11,7 @@ function getUsers() {
         const userList = document.getElementById("userList");
         data.data.forEach((user) => {
           const listItem = document.createElement("li");
-          listItem.textContent = `${user.first_name} ${user.last_name}`;
+          listItem.textContent = `${user.title} ------ ${user.author}`;
           userList.appendChild(listItem);
         });
       }
