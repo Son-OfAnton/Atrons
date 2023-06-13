@@ -21,8 +21,8 @@
         <div class="login">
             <h3 class="title">User Login</h3>
             <p id="errormessage" style = "display: none">Wrong Email or Password</p>
-            <form action="http://localhost/Atrons/backend/api/user/read_single.php" method="get">
-                <div class="text-input">
+            <form id="login" action="http://localhost/Atrons/backend/api/user/read_single.php" method="get">
+                <div class="text-input" for="email">
                     <img class="icon" src="/assets/user.svg">
                     <input name="email" id="email" type="email" placeholder="Username">
                 </div>
