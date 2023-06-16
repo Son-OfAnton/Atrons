@@ -93,6 +93,13 @@ body {
   margin: 15px 0;
 }
 
+p#errormessage {
+  background: #fa538d44;
+  font-size: smaller;
+  display: none;
+  padding: 5px;
+}
+
 .icon {
   max-width: 20px;
   max-height: 20px;

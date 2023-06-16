@@ -55,4 +55,15 @@ class Book
             return null; // Book not found
         }
     }
+
+    public function delete_book($ISBN) {
+        $query = 'DELETE FROM ' . $this->table . ' WHERE ISBN = :isbn';
+        // $mysqli_query(this->con, $query) or die("Message!!"); 
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':isbn', $ISBN);
+
+        $stmt->execute();
+        // else
+        // echo "Error: ".stmt_error($stmt)
+    }
 }

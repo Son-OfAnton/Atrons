@@ -1,6 +1,6 @@
 // Function to make the API request and display the results
 function getUsers() {
-  fetch("http://localhost/Atrons/backend/api/user/read.php")
+  fetch("http://localhost/Atrons/backend/api/book/read.php")
     .then((response) => response.json())
     .then((data) => {
       if (data.message) {

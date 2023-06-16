@@ -18,10 +18,9 @@
             <div class="pill-4 rotate-45"></div>
         </div>
 
-        <div class="login">
+        <form class="login" id="login" action="http://localhost/Atrons/backend/api/user/read_single.php" method="get">
             <h3 class="title">User Login</h3>
-            <p id="errormessage" style = "display: none">Wrong Email or Password</p>
-            <form id="login" action="http://localhost/Atrons/backend/api/user/read_single.php" method="get">
+            <p id="errormessage">Wrong Email or Password</p>
                 <div class="text-input" for="email">
                     <img class="icon" src="/assets/user.svg">
                     <input name="email" id="email" type="email" placeholder="Username">
@@ -31,11 +30,10 @@
                     <input type="password" name="pass" id="pass" placeholder="Password">
                 </div>
                 <input type="submit" class="login-btn" value="LOGIN">
-            </form>
             <div class="create">
                 <a href="#">Create new account</a>
             </div>
-        </div>
+        </form>
     </div>
 </body>
 <script src="script\login.js"></script>
