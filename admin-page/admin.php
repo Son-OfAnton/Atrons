@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/32705a7e45.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Admin</title>
 </head>
 <body>
@@ -43,6 +43,6 @@
         <button><i class="fa-solid fa-2xl fa-plus"></i></button>
     </main>
 </body>
-<script src="books.js"></script>
+<script src="script/script.js"></script>
 
 </html>

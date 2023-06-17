@@ -3,17 +3,17 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 include_once '../../config/Database.php';
-include_once '../../models/Book.php';
+include_once '../../models/User.php';
 
 $database = new Database();
 $db = $database->connect();
 
-echo "delleted";
-$book = new Book($db);
+$user = new User($db);
 
-$ISBN = isset($_GET['isbn']) ? $_GET['isbn'] : die(json_encode(array('message' => 'Invalid title parameter')));
-$book->delete_book($ISBN);
-echo "delleted";
+echo $_GET["email"];
+$email = isset($_GET['email']) ? $_GET['email'] : die(json_encode(array('message' => 'Invalid title parameter')));
+$user->delete_book($email);
+
 header("Location: http://localhost/Atrons/admin-page/admin.php");
 exit;
 ?>

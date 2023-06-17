@@ -54,4 +54,14 @@ class User
             return null; // User not found
         }
     }
+
+    public function delete_book($email) {
+        $query = 'DELETE FROM ' . $this->table . ' WHERE email = :email';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        echo "Succuess in deleting";
+
+        $stmt->execute();
+    }
 }
+?>

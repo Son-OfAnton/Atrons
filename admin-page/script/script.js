@@ -22,10 +22,12 @@ changeHeader(currentTable);
 getData(currentTable);
 
 async function getData(currentTable) {
-    console.log(currentTable, currentAttribute);
+
     response = await fetch("http://localhost/Atrons/backend/api/"+currentTable+"/read.php");
     data = await response.json();
+
     if (data.message) console.error("Some thing went wrong!");
+    
     else {
         records = data.data;
         populateTable(records, currentAttribute)
@@ -75,12 +77,15 @@ searchbar.addEventListener('keyup', (e) => {
 //delete records permanently
 function deleteRecord(event) {
 
-    recordId = event.target.innerHTML;
+    let recordId = event.target.innerHTML;
+    let field = currentTable == 'book' ? 'isbn' : 'email';
 
     if (!confirm('Are you sure you want to delete this record?')) return;
     
-    fetch("http://localhost/Atrons/backend/api/"+currentTable+"/delete.php?isbn=" + recordId)
+    console.log("http://localhost/Atrons/backend/api/"+currentTable+"/delete.php?" + field + "=" + recordId);
+    fetch("http://localhost/Atrons/backend/api/"+currentTable+"/delete.php?" + field + "=" + recordId)
     .then(() => location.reload(true));
+    //Refresh the page after finishing the deletion.
 
 }
 

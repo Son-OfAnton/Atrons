@@ -54,12 +54,25 @@ h4 {
 .new input[type="text"] {
     border:solid 0.5px rgba(43, 43, 43, 0.225);
     border-radius: 5px;
-    font-size: 15px;
     font-family: Poppins, Helvetica, sans-serif;
     padding-left: 5px;
     max-width: 60%;
     min-height: 35px;
     margin: 2px 0 7.5px 0;
+}
+
+#file {
+    border: 1px solid rgba(43, 43, 43, 0.225);
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0 10px;
+    align-items: center;
+    height: 2rem;
+    width: 50%;
+    margin: 1em 0;
 }
 
 .boxes {
@@ -91,7 +104,7 @@ h4 {
     height: 100%;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-}
+} 
 
 .boxes input[type="radio"]:checked::before {
     transform: scale(1);
@@ -130,4 +143,9 @@ textarea::-webkit-scrollbar {
     line-height: 1.5;
     padding: 6px;
     width: 30%;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    border:solid 1px red;   
 }
