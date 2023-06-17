@@ -163,7 +163,7 @@ nav ul li a:hover {
   margin: 30px 0 0 50px;
 }
 
-.card-container {
+.searched-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   /* border: 1px solid red; */
@@ -171,37 +171,37 @@ nav ul li a:hover {
 }
 
 @media (min-width: 1200px) {
-  .card-container {
+  .searched-card-container {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 
 @media (max-width: 1199px) and (min-width: 960px) {
-  .card-container {
+  .searched-card-container {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media (max-width: 959px) and (min-width: 768px) {
-  .card-container {
+  .searched-card-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
-  .card-container {
+  .searched-card-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 575px) and (min-width: 320px) {
-  .card-container {
+  .searched-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 319px) {
-  .card-container {
+  .searched-card-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }

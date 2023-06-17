@@ -55,4 +55,30 @@ class Book
             return null; // Book not found
         }
     }
+
+    // gets all books which belong to a particular category
+    public function get_books_by_category($category)
+    {
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE category = ?';
+        $stmt = $this->conn->prepare($query);
+
+        // bind category
+        $stmt->bindParam(1, $category);
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+    public function get_books_by_title_author($query)
+    {
+        $query = '%' . $query . '%';
+
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE title LIKE ? OR author LIKE ?';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $query);
+        $stmt->bindParam(2, $query);
+        $stmt->execute();
+
+        return $stmt;
+    }
 }

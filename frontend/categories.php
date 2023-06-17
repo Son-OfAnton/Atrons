@@ -54,182 +54,21 @@
     </section>
 
     <section class="card-grid">
-      <h3><span id="search-size">10</span> search results</h3>
-      <div class="card-container">
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 1" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 1</h3>
-            <p class="card-author">Author 1</p>
-            <p class="card-price">$9.99</p>
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 2" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 2</h3>
-            <p class="card-author">Author 2</p>
-            <p class="card-price">$12.99</p>
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 3" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 3</h3>
-            <p class="card-author">Author 3</p>
-            <p class="card-price">$12.99</p>
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 4" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 4</h3>
-            <p class="card-author">Author 4</p>
-            <p class="card-price">$12.99</p>
-
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 4" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 4</h3>
-            <p class="card-author">Author 4</p>
-            <p class="card-price">$12.99</p>
-
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 4" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 4</h3>
-            <p class="card-author">Author 4</p>
-            <p class="card-price">$12.99</p>
-
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 4" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 4</h3>
-            <p class="card-author">Author 4</p>
-            <p class="card-price">$12.99</p>
-
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 4" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 4</h3>
-            <p class="card-author">Author 4</p>
-            <p class="card-price">$12.99</p>
-
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/assets/newBook.jpg" alt="Book 5" class="card-image" />
-          <div class="card-content">
-            <h3 class="card-title">Book Title 5</h3>
-            <p class="card-author">Author 5</p>
-            <p class="card-price">$12.99</p>
-
-            <div class="card-buttons">
-              <!-- <button>
-                <img class="svgs" src="/assets/cart.svg" alt="" />
-              </button>
-              <button>
-                <img class="svgs" src="/assets/white-heart.svg" alt="" />
-              </button> -->
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </div>
-        </div>
+      <h3><span id="search-size"></span> search results</h3>
+      <div class="searched-card-container">
       </div>
     </section>
 
 
   </main>
 
+  <script src="script/searchByCategory.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get('category');
 
+    searchByCategory(selectedCategory);
+  </script>
 </body>
 
 </html>
