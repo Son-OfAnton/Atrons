@@ -22,15 +22,18 @@ changeHeader(currentTable);
 getData(currentTable);
 
 async function getData(currentTable) {
-
-    response = await fetch("http://localhost/Atrons/backend/api/"+currentTable+"/read.php");
-    data = await response.json();
-
-    if (data.message) console.error("Some thing went wrong!");
+    try {
+        response = await fetch("http://localhost/Atrons/backend/api/"+currentTable+"/read.php");
+        data = await response.json();
     
-    else {
-        records = data.data;
-        populateTable(records, currentAttribute)
+        if (data.message) console.error("Some thing went wrong!");
+        
+        else {
+            records = data.data;
+            populateTable(records, currentAttribute)
+        }
+    } catch(e) {
+        console.log("Error" + e);
     }
     
 }
@@ -42,11 +45,21 @@ function populateTable(Data, attributes) {
     Data.forEach(book => {
         row = document.createElement('tr');
         attributes.forEach((attribute) => {
-            col = document.createElement('td');
+            cell = document.createElement('td');
+            
             if (attribute=='ISBN' || attribute=='email')
-            col.setAttribute("onclick", "deleteRecord(event)")
-            col.append(book[attribute]);
-            row.append(col);
+            cell.setAttribute("onclick", "deleteRecord(event)")
+
+            if (attribute == 'title') {
+                let newUrl = encodeURI(book[attribute]); 
+                console.log(newUrl);
+                url = `http://localhost/Atrons/backend/api/book/read_single.php?title=${newUrl}`;
+                book[attribute] = `<a href=${url}> ${book[attribute]} </a>`;
+            }
+
+            // cell.append(book[attribute]);
+            cell.innerHTML = book[attribute];
+            row.append(cell);
         })
         table_body.append(row)
     });
@@ -82,11 +95,20 @@ function deleteRecord(event) {
 
     if (!confirm('Are you sure you want to delete this record?')) return;
     
-    console.log("http://localhost/Atrons/backend/api/"+currentTable+"/delete.php?" + field + "=" + recordId);
     fetch("http://localhost/Atrons/backend/api/"+currentTable+"/delete.php?" + field + "=" + recordId)
     .then(() => location.reload(true));
     //Refresh the page after finishing the deletion.
 
+}
+
+function editRecord(event) {
+    let recordId = event.target.innerHTML;
+    let field = 'title';
+
+    if (!confirm('Are you sure you want to delete this record?')) return;
+    
+    fetch("http://localhost/Atrons/backend/api/"+currentTable+"/edit.php?" + field + "=" + recordId)
+    .then(() => location.reload(true));
 }
 
 const navs = document.querySelectorAll('ul');

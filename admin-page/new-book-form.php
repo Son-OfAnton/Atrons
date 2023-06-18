@@ -27,7 +27,7 @@
         <input type="file" name="cover_photo" id="cover_photo">
         <label for="category">CATEGORY: </label>
         <div class="boxes">
-            <input type="radio" id="fiction" value="Fiction"> <label for="ficiton">Fiction</label>
+            <input type="radio" id="fiction" value="Fiction" name="category"> <label for="ficiton">Fiction</label>
             <input type="radio" name="category" id="biography" value="Biography"><label for="ficiton">Fiction</label>
     
             <input type="radio" name="category" id="scientfic" value="Science fiction"><label for="ficiton">Fiction</label>
