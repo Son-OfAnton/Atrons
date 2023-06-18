@@ -28,10 +28,20 @@ if (data['isbn']) {
     form.setAttribute('action', 'http://localhost/Atrons/backend/api/book/edit.php');
 }
 
+const fileInput = document.getElementById('cover_photo');
+const fileLabel = document.getElementById('file');
+
+fileInput.addEventListener('change', () => {
+  fileLabel.innerHTML = fileInput.files[0].name;
+});
+
 submit.addEventListener('click', (e) => {
     e.preventDefault();
     filled =  0
     fields.forEach((field) => {
+        const err = document.createElement("div");
+        err.classList.add('error-msg');
+
         value = field.value.trim();
 
         if(field.id == 'isbn' || field.id == 'price' || field.id == 'num_copies') {
@@ -39,23 +49,28 @@ submit.addEventListener('click', (e) => {
             if(isNaN(Number(value))) {
                 filled -= 1;
                 field.classList.add("error");
+                err.innerHTML = "Only numeric values allowed";
+                field.insertAdjacentElement("afterend", err);
+                err.scrollIntoView(true);
             }
         }
         
         if(field.type == 'radio') {
             if (field.checked) filled += 1;
-        }
+        } 
         else if(field.type !== "submit" && field.type !== "reset" && field.type !== "file") {
-            console.log(value)
             if(value != '') {
                 filled += 1;
             } else {
                 field.classList.add("error");
+                err.innerHTML = "This field can't be empty";
+                field.insertAdjacentElement("afterend", err);
             }
         }
 
         field.addEventListener("keyup", (e) => {
             e.target.classList.remove("error");
+            err.style.display = 'none';
         }, true)
     })
 

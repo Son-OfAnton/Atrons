@@ -149,3 +149,10 @@ textarea::-webkit-scrollbar {
     background-color: rgba(255, 0, 0, 0.2);
     border:solid 1px red;   
 }
+
+.error-msg {
+    font-size: small;
+    color: red;
+    padding: 0 10px;
+    height: fit-content;
+}

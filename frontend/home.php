@@ -17,7 +17,7 @@
       <a href="#">
         <img class="nav-svgs" src="assets/red-heart.svg" />
       </a> -->
-    <a href="#">
+    <a href="http://localhost/Atrons/backend/api/book/test.php">
       <img class="nav-svgs" src="assets/person.svg" />
     </a>
   </div>

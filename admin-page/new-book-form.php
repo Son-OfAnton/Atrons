@@ -23,7 +23,7 @@
         <input type="text" name="num_copies" id="num_copies">
         <label for="price">PRICE: </label>
         <input type="text" name="price" id="price">
-        <label for="cover_photo" id="file">UPLOAD COVER PAGE HERE </label>
+        <label for="cover_photo" id="file">UPLOAD COVER PAGE HERE</label>
         <input type="file" name="cover_photo" id="cover_photo">
         <label for="category">CATEGORY: </label>
         <div class="boxes">

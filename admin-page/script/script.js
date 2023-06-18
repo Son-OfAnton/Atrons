@@ -53,7 +53,7 @@ function populateTable(Data, attributes) {
             if (attribute == 'title') {
                 let newUrl = encodeURI(book[attribute]); 
                 console.log(newUrl);
-                url = `http://localhost/Atrons/backend/api/book/read_single.php?title=${newUrl}`;
+                url = `http://localhost/Atrons/backend/api/book/read_single.php?title=${newUrl}&message=edit`;
                 book[attribute] = `<a href=${url}> ${book[attribute]} </a>`;
             }
 

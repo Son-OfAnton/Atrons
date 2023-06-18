@@ -28,7 +28,12 @@ if ($result) {
 
     $query_string = http_build_query($book_arr);
 
-    header("Location: http://localhost/Atrons/admin-page/new-book-form.php?" . $query_string);
+    echo isset($_GET['message']);
+    if(isset($_GET['message'])) {
+        echo "here1";
+        // header("Location: http://localhost/Atrons/admin-page/new-book-form.php?" . $query_string);
+    }
+
 } else {
     echo json_encode(array('message' => 'Book not found'));
 }
