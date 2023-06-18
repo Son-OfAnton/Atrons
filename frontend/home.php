@@ -186,9 +186,10 @@
       </div>
     </div>
   </footer>
-  <script src="script/carousel.js"></script>
-  <script src="script/home.js"></script>
-  <script src="script/searchByCategory.js"></script>
+  <script src="./script/home.js"></script>
+  <script src="./script/searchByCategory.js"></script>
+  <!-- <script src="./script/cart.js"></script> -->
+
 </body>
 
 </html>

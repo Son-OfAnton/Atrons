@@ -62,7 +62,10 @@
 
   </main>
 
-  <script src="script/searchByCategory.js"></script>
+  <script src="./script/searchByCategory.js"></script>
+  <!-- <script src="./script/cart.js"></script> -->
+
+
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const selectedCategory = urlParams.get('category');

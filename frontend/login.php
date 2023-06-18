@@ -31,7 +31,7 @@
             </div>
             <input type="submit" class="login-btn" value="LOGIN">
             <div class="create">
-                <a href="#">Create new account</a>
+                <a href="registration.php">Create new account</a>
             </div>
         </form>
     </div>
