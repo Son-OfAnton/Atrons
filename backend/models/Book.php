@@ -28,12 +28,12 @@ class Book
         $this->num_copies = intval($fields['num_copies']);
         $this->category = $fields['category'];
         $this->cover_photo = $image_location;
-    
-        $query = "INSERT INTO ".$this->table
-        . " (`ISBN`, `title`, `author`, `description`, `price`, `num_copies`, `category`, `cover_photo`) "
-        . "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        $query = "INSERT INTO " . $this->table
+            . " (`ISBN`, `title`, `author`, `description`, `price`, `num_copies`, `category`, `cover_photo`) "
+            . "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query);
-    
+
         $stmt->bindParam(1, $this->ISBN);
         $stmt->bindParam(2, $this->title);
         $stmt->bindParam(3, $this->author);
@@ -42,11 +42,12 @@ class Book
         $stmt->bindParam(6, $this->num_copies);
         $stmt->bindParam(7, $this->category);
         $stmt->bindParam(8, $this->cover_photo);
-    
+
         return $stmt->execute();
     }
 
-    public function update_info($new_infos) {
+    public function update_info($new_infos)
+    {
         $this->ISBN = $new_infos['isbn'];
         $this->title = $new_infos['title'];
         $this->author = $new_infos['author'];
@@ -55,12 +56,12 @@ class Book
         $this->num_copies = intval($new_infos['num_copies']);
         $this->category = $new_infos['category'];
         // $this->cover_photo = $image_location;
-    
-        $query = "UPDATE ".$this->table
-        . " SET `title` = ?, `author` = ?, `description` = ?, `price` = ?, `num_copies` = ?, `category` = ? "
-        . "WHERE `ISBN` = ?";
+
+        $query = "UPDATE " . $this->table
+            . " SET `title` = ?, `author` = ?, `description` = ?, `price` = ?, `num_copies` = ?, `category` = ? "
+            . "WHERE `ISBN` = ?";
         $stmt = $this->conn->prepare($query);
-    
+
         $stmt->bindParam(1, $this->title);
         $stmt->bindParam(2, $this->author);
         $stmt->bindParam(3, $this->description);
@@ -70,14 +71,14 @@ class Book
         $stmt->bindParam(7, $this->ISBN);
 
         return $stmt->execute();
-        
     }
-    
-    public function update_image($ISBN, $image_location) {
-        $query = "UPDATE ". $this->table ." SET `cover_photo` = ?"
-        ." WHERE `ISBN` = ?";
+
+    public function update_image($ISBN, $image_location)
+    {
+        $query = "UPDATE " . $this->table . " SET `cover_photo` = ?"
+            . " WHERE `ISBN` = ?";
         $stmt = $this->conn->prepare($query);
-        
+
         $stmt->bindParam(1, $image_location);
         $stmt->bindParam(2, $ISBN);
         echo $ISBN;
@@ -147,5 +148,14 @@ class Book
         $stmt->execute();
 
         return $stmt;
+    }
+
+    public function delete_book($ISBN)
+    {
+        $query = 'DELETE FROM ' . $this->table . ' WHERE ISBN = :isbn';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':isbn', $ISBN);
+
+        $stmt->execute();
     }
 }

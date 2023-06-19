@@ -12,8 +12,7 @@ $user = new User($db);
 
 echo $_GET["email"];
 $email = isset($_GET['email']) ? $_GET['email'] : die(json_encode(array('message' => 'Invalid title parameter')));
-$user->delete_book($email);
+$user->delete_user($email);
 
 header("Location: http://localhost/Atrons/admin-page/admin.php");
 exit;
-?>

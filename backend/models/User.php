@@ -76,5 +76,14 @@ class User
             return false; // Registration failed
         }
     }
+
+    public function delete_user($email)
+    {
+        $query = 'DELETE FROM ' . $this->table . ' WHERE email = :email';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        echo "Succuess in deleting";
+
+        $stmt->execute();
+    }
 }
-?>
