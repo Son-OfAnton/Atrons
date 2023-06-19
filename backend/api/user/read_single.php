@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
@@ -10,7 +12,6 @@ $db = $database->connect();
 
 $user = new User($db);
 
-$s = false;
 $user->user_id = isset($_GET['email']) ? $_GET['email'] : die(json_encode(array('message' => 'Invalid email parameter')));
 $user->password = isset($_GET['pass']) ? $_GET['pass'] : die(json_encode(array('message' => 'Invalid password parameter')));
 $userObj = $user->get_single_user();
@@ -24,12 +25,15 @@ if ($userObj) {
         'gender' => $userObj->gender,
         'phone'  => $userObj->phone,
     );
+
+    echo json_encode($user_arr);
+    $_SESSION['email'] = $user_arr["email"];
+    
     header('Location: http://localhost/Atrons/frontend/home.php');
     exit;
-    // echo json_encode($user_arr);
-} else {
-    $s = true;
-    header('Location: http://localhost/Atrons/frontend/login.php?message="failed"');
 
+} else {
+    header('Location: http://localhost/Atrons/frontend/login.php?message=not found');
+    exit;
     // echo json_encode(array('message' => 'User not found'));
 }

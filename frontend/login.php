@@ -30,6 +30,7 @@
                 <input type="password" name="pass" id="pass" placeholder="Password">
             </div>
             <input type="submit" class="login-btn" value="LOGIN">
+
             <div class="create">
                 <a href="registration.php">Create new account</a>
             </div>

@@ -15,7 +15,7 @@ $result = $book->get_single_book($title);
 
 if ($result) {
     $book_arr = array(
-        'ISBN' => $book->ISBN,
+        'isbn' => $book->ISBN,
         'title' => $book->title,
         'author' => $book->author,
         'description' => $book->description,
@@ -24,8 +24,17 @@ if ($result) {
         'num_copies' => $book->num_copies,
         'category' => $book->category,
     );
+    echo json_encode(array("data" => $book_arr));
 
-    echo json_encode($book_arr);
+    $query_string = http_build_query($book_arr);
+
+    echo isset($_GET['message']);
+    if(isset($_GET['message'])) {
+        echo "here1";
+        // header("Location: http://localhost/Atrons/admin-page/new-book-form.php?" . $query_string);
+    }
+
 } else {
     echo json_encode(array('message' => 'Book not found'));
 }
+ 
