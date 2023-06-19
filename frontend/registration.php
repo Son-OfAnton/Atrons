@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <title> Registration </title>
-    <link rel="stylesheet" href="/style/registration.css">
+    <link rel="stylesheet" href="./style/registration.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -13,37 +12,36 @@
     <div class="container">
         <div class="title">Registration</div>
         <div class="content">
-            <form action="#">
+            <form id="registration-form" action="#">
                 <div class="user-details">
                     <div class="input-box">
-                        <span class="details">Full Name</span>
-                        <input type="text" required>
+                        <span class="details">First Name</span>
+                        <input id="first-name" type="text" required>
                     </div>
                     <div class="input-box">
-                        <span class="details">Username</span>
-                        <input type="text" required>
+                        <span class="details">Last Name</span>
+                        <input id="last-name" type="text" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="text" required>
+                        <input id="email" type="text" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone Number</span>
-                        <input type="text" required>
+                        <input id="phone" type="text" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="text" required>
+                        <input id="password" type="password" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Confirm Password</span>
-                        <input type="text" required>
+                        <input id="confirm-password" type="password" required>
                     </div>
                 </div>
                 <div class="gender-details">
                     <input type="radio" name="gender" id="dot-1">
                     <input type="radio" name="gender" id="dot-2">
-                    <input type="radio" name="gender" id="dot-3">
                     <span class="gender-title">Gender</span>
                     <div class="category">
                         <label for="dot-1">
@@ -62,7 +60,7 @@
             </form>
         </div>
     </div>
-
+    <script src="./script/registration.js"></script>
 </body>
 
 </html>

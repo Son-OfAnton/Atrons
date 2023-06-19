@@ -48,20 +48,33 @@ class User
             $user->password = $row['password'];
             $user->gender = $row['gender'];
             $user->phone = $row['phone'];
-            
+
             return $user;
         } else {
             return null; // User not found
         }
     }
 
-    public function delete_book($email) {
-        $query = 'DELETE FROM ' . $this->table . ' WHERE email = :email';
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':email', $email);
-        echo "Succuess in deleting";
+    public function register()
+    {
+        $query = 'INSERT INTO User (email, first_name, last_name, password, gender, phone) 
+                  VALUES (:email, :firstName, :lastName, :password, :gender, :phone)';
 
-        $stmt->execute();
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':firstName', $this->first_name);
+        $stmt->bindParam(':lastName', $this->last_name);
+        $stmt->bindParam(':password', $this->password);
+        $stmt->bindParam(':gender', $this->gender);
+        $stmt->bindParam(':phone', $this->phone);
+
+        // Execute query
+        if ($stmt->execute()) {
+            return true; // Registration successful
+        } else {
+            return false; // Registration failed
+        }
     }
 }
 ?>

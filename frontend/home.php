@@ -11,13 +11,7 @@
 
 <body>
   <div class="nav-icons">
-    <!-- <a href="#">
-        <img class="nav-svgs" src="assets/cart.svg" />
-      </a>
-      <a href="#">
-        <img class="nav-svgs" src="assets/red-heart.svg" />
-      </a> -->
-    <a href="http://localhost/Atrons/backend/api/book/test.php">
+    <a href="#">
       <img class="nav-svgs" src="assets/person.svg" />
     </a>
   </div>
@@ -52,24 +46,24 @@
       </ul>
     </div>
   </nav>
-  <div class="mega-menu">
+  <div class="mega-menu" id="mega-menu">
     <ul class="drop-menu">
-      <li class="choice"><a href="#">Fiction</a></li>
-      <li class="choice"><a href="#">Romance</a></li>
-      <li class="choice"><a href="#">Sci-Fi</a></li>
-      <li class="choice"><a href="#">Adventure</a></li>
+      <li class="choice"><a href="categories.php?category=Fiction">Fiction</a></li>
+      <li class="choice"><a href="categories.php?category=Romance">Romance</a></li>
+      <li class="choice"><a href="categories.php?category=Sci-Fi">Sci-Fi</a></li>
+      <li class="choice"><a href="categories.php?category=Adventure">Adventure</a></li>
     </ul>
 
     <ul class="drop-menu">
-      <li class="choice"><a href="#">History</a></li>
-      <li class="choice"><a href="#">Biography</a></li>
-      <li class="choice"><a href="#">Psychology</a></li>
-      <li class="choice"><a href="#">Poetry</a></li>
+      <li class="choice"><a href="categories.php?category=History">History</a></li>
+      <li class="choice"><a href="categories.php?category=Biography">Biography</a></li>
+      <li class="choice"><a href="categories.php?category=Psychology">Psychology</a></li>
+      <li class="choice"><a href="categories.php?category=Poetry">Poetry</a></li>
     </ul>
 
     <ul class="drop-menu">
-      <li class="choice"><a href="#">Children</a></li>
-      <li class="choice"><a href="#">Politics</a></li>
+      <li class="choice"><a href="categories.php?category=Children">Children</a></li>
+      <li class="choice"><a href="categories.php?category=Politics">Politics</a></li>
     </ul>
   </div>
 
@@ -98,12 +92,6 @@
           <p class="card-author">Author 1</p>
           <p class="card-price">$9.99</p>
           <div class="card-buttons">
-            <!-- <button>
-              <img class="svgs" src="assets/cart.svg" alt="" />
-            </button>
-            <button>
-              <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button> -->
             <button class="cart-btn">Add to cart</button>
           </div>
         </div>
@@ -116,12 +104,6 @@
           <p class="card-author">Author 2</p>
           <p class="card-price">$12.99</p>
           <div class="card-buttons">
-            <!-- <button>
-              <img class="svgs" src="assets/cart.svg" alt="" />
-            </button>
-            <button>
-              <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button> -->
             <button class="cart-btn">Add to cart</button>
           </div>
         </div>
@@ -134,12 +116,6 @@
           <p class="card-author">Author 3</p>
           <p class="card-price">$12.99</p>
           <div class="card-buttons">
-            <!-- <button>
-              <img class="svgs" src="assets/cart.svg" alt="" />
-            </button>
-            <button>
-              <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button> -->
             <button class="cart-btn">Add to cart</button>
           </div>
         </div>
@@ -153,12 +129,6 @@
           <p class="card-price">$12.99</p>
 
           <div class="card-buttons">
-            <!-- <button>
-              <img class="svgs" src="assets/cart.svg" alt="" />
-            </button>
-            <button>
-              <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button> -->
             <button class="cart-btn">Add to cart</button>
           </div>
         </div>
@@ -172,12 +142,6 @@
           <p class="card-price">$12.99</p>
 
           <div class="card-buttons">
-            <!-- <button>
-              <img class="svgs" src="assets/cart.svg" alt="" />
-            </button>
-            <button>
-              <img class="svgs" src="assets/white-heart.svg" alt="" />
-            </button> -->
             <button class="cart-btn">Add to cart</button>
             </button>
           </div>
@@ -222,8 +186,10 @@
       </div>
     </div>
   </footer>
-  <script src="script/carousel.js"></script>
-  <script src="script/home.js"></script>
+  <script src="./script/home.js"></script>
+  <script src="./script/searchByCategory.js"></script>
+  <!-- <script src="./script/cart.js"></script> -->
+
 </body>
 
 </html>

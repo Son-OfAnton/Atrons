@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Shopping cart</title>
 
-    <link rel="stylesheet" href="/style/cart.css" />
+    <link rel="stylesheet" href="./style/cart.css" />
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                 <article class="product">
                     <header>
                         <a class="remove">
-                            <img src="/assets/newBook.jpg" alt="Gamming Mouse" />
+                            <img src="./assets/newBook.jpg" />
 
                             <h3>Remove</h3>
                         </a>
@@ -50,7 +50,7 @@
                 <article class="product">
                     <header>
                         <a class="remove">
-                            <img src="/assets/newBook.jpg" alt="Keyboard" />
+                            <img src="./assets/newBook.jpg" />
 
                             <h3>Remove</h3>
                         </a>
@@ -78,7 +78,7 @@
                 <article class="product">
                     <header>
                         <a class="remove">
-                            <img src="/assets/newBook.jpg" alt="Handfree" />
+                            <img src="./assets/newBook.jpg" />
 
                             <h3>Remove</h3>
                         </a>
@@ -106,7 +106,7 @@
                 <article class="product">
                     <header>
                         <a class="remove">
-                            <img src="/assets/newBook.jpg" alt="Gamming Mouse" />
+                            <img src="./assets/newBook.jpg" />
 
                             <h3>Remove</h3>
                         </a>
@@ -151,7 +151,7 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/script/cart.js"></script>
+    <script src="./script/cart.js"></script>
 </body>
 
 </html>

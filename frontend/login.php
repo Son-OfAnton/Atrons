@@ -18,23 +18,25 @@
             <div class="pill-4 rotate-45"></div>
         </div>
 
-        <form class="login" id="login" action="http://localhost/Atrons/backend/api/user/read_single.php" method="get">
+        <form class="login" action="http://localhost/Atrons/backend/api/user/read_single.php" method="get">
             <h3 class="title">User Login</h3>
-            <p id="errormessage">Wrong Email or Password</p>
-                <div class="text-input" for="email">
-                    <img class="icon" src="/assets/user.svg">
-                    <input name="email" id="email" type="email" placeholder="Username">
-                </div>
-                <div class="text-input">
-                    <img class="icon" src="/assets/lock.svg">
-                    <input type="password" name="pass" id="pass" placeholder="Password">
-                </div>
-                <input type="submit" class="login-btn" value="LOGIN">
+            <p id="errormessage" style="display: none">Wrong Email or Password</p>
+            <div class="text-input">
+                <img class="icon" src="./assets/user.svg">
+                <input name="email" id="email" type="email" placeholder="Username">
+            </div>
+            <div class="text-input">
+                <img class="icon" src="./assets/lock.svg">
+                <input type="password" name="pass" id="pass" placeholder="Password">
+            </div>
+            <input type="submit" class="login-btn" value="LOGIN">
+
             <div class="create">
-                <a href="#">Create new account</a>
+                <a href="registration.php">Create new account</a>
             </div>
         </form>
     </div>
 </body>
 <script src="script\login.js"></script>
+
 </html>
