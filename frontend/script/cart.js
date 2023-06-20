@@ -4,10 +4,12 @@ const cart = $("#cart")[0];
 
 
 $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(data) {
-  
+  // data = []
+  cart.innerHTML = '';
+  let record = {}
   $.each(data, function(index, item) {
     let product = $("<article class='product'>");
-
+    record[index] = 0;
     resultHtml = `
         <header>
             <a class="remove" data-isbn=${index}>
@@ -25,7 +27,7 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
     
         <footer class="content">
             <span class="qt-minus">-</span>
-            <span class="qt">0</span>
+            <span class="qt" data-isbn=${index}>0</span>
             <span class="qt-plus">+</span>
     
             <h2 class="full-price">0birr</h2>
@@ -77,8 +79,7 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
       let isbn = el[0].dataset.isbn
       
       fetch("http://localhost/Atrons/backend/api/cart/remove_from_cart.php?isbn="+isbn)
-      // .then(response => response.json())
-      // .catch(error => console.error(error));
+
       el.parent().parent().addClass("removed");
       window.setTimeout(function () {
         el.parent()
@@ -87,7 +88,7 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
             el.parent().parent().remove();
             if ($(".product").length == 0) {
               if (check) {
-                $("#cart").html("<h1>The shop does not function, yet!</h1>");
+                
               } else {
                 $("#cart").html("<h1>No products!</h1>");
               }
@@ -98,10 +99,12 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
     });
     
     $(".qt-plus").click(function () {
-      $(this)
+      key = $(this)
         .parent()
         .children(".qt")
-        .html(parseInt($(this).parent().children(".qt").html()) + 1);
+       
+      key.html(parseInt($(this).parent().children(".qt").html()) + 1);
+      console.log(key.dataset.isbn);
   
       $(this).parent().children(".full-price").addClass("added");
   
@@ -134,15 +137,30 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
   
     $(".btn").click(function () {
       check = true;
-      $(".remove").click();
+      const data = [];
+      
+      // fetch('https://example.com/api/endpoint', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify(data)
+      // })
+      // .then(response => response.json())
+      // .then(data => {
+      //   console.log(data);
+      // })
+      // .catch(error => {
+      //   console.error(error);
+      // });
+      // $(".remove").click();
     });
   });
 });
-console.log($('#cart').is(":empty"))
 
 if ($('#cart').is(":empty")) {
   $("#cart").html("<h1>No cart items found!</h1>");
-}    // $('.product')[index].html(resultHtml);
+} 
 
 
 

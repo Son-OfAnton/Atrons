@@ -13,13 +13,9 @@ $database = new Database();
 $db = $database->connect();
 
 $cart = new Cart($db);
-echo $_GET["isbn"];
-if(isset($_GET['isbn']) && isset($_SESSION['email'])) {
-    $ISBN = $_GET['isbn'];
-    if ($cart->delete_cart($ISBN, $_SESSION['email'])) {
-        echo "Successfully Deleted";
-    } else {
-        echo "Not Deleted";
-    }
-}
 
+if($cart->checkout(10, "123231232", 'john@example.com')) {
+    echo "UNBELIVABLE";
+} else {
+    echo "fup";
+}

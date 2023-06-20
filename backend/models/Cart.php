@@ -57,6 +57,7 @@ class Cart
                     'description'=>$row['description'],
                 );
             }
+            $this->email = $email;
             return $books_arr;
         } else {
             echo "<p>No books found</p>";
@@ -69,5 +70,39 @@ class Cart
         $stmt->bindParam(1, $ISBN);
         $stmt->bindParam(2, $email);
         return $stmt->execute();
+    }
+
+    public function checkout($num_copies, $ISBN, $email) {
+        $query = "SELECT num_copies FROM book where ISBN = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $ISBN);
+        $stmt->execute();
+        $result = $stmt;
+        $record = $result->fetch(PDO::FETCH_ASSOC);
+
+        if ($num_copies > $record['num_copies']) {
+            return false;
+        }
+
+        $query = "INSERT INTO Purchase_Record (`email`, `ISBN`, `num_copies`)VALUES (?, ?, ?)";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $email);
+        $stmt->bindParam(2, $ISBN);
+        $stmt->bindParam(3, $num_copies);
+        
+        if(!$stmt->execute()) {
+            return false;
+        }
+
+        $num_copies = $record['num_copies'] - $num_copies;
+        $query = "UPDATE book SET num_copies = ? WHERE ISBN = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $num_copies);
+        $stmt->bindParam(2, $ISBN);
+        if(!$stmt->execute()) {
+            return false;
+        }
+        return true;
     }
 }

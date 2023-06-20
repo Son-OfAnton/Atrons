@@ -14,8 +14,11 @@ $db = $database->connect();
 
 $cart = new Cart($db);
 
-$data = $cart->read_cart('john@example.com');
 
-echo json_encode($data);
-// if(isset('john@example.com')) {
-// }
+if(isset($_SESSION['email'])) {
+    $data = $cart->read_cart($_SESSION['email']);
+    echo json_encode($data);
+} else {
+    echo "error";
+    header('Location: http://localhost/Atrons/backend/api/cart/read_cart.php');
+}

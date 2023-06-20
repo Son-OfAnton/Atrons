@@ -1,4 +1,5 @@
 <?php
+session_start();
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST');
@@ -15,7 +16,7 @@ $cart = new Cart($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-$cart->email = $data->email;
+$cart->email = $_SESSION['email'];
 $cart->ISBN = $data->ISBN;
 
 

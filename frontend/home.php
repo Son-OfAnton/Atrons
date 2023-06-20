@@ -29,11 +29,11 @@
       </div>
       <ul class="nav-list">
         <li id="home">
-          <a href="#">Home</a>
+          <a href="home.php">Home</a>
         </li>
 
         <li id="categories">
-          <a href="#">Categories</a>
+          <a href="categories.php">Categories</a>
         </li>
 
         <li id="wishlist">
@@ -41,7 +41,7 @@
         </li>
 
         <li id="cart">
-          <a href="#">Cart</a>
+          <a href="cart.php">Cart</a>
         </li>
       </ul>
     </div>
