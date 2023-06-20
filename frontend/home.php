@@ -41,7 +41,7 @@
         </li>
 
         <li id="cart">
-          <a href="#">About</a>
+          <a href="#footer">About</a>
         </li>
       </ul>
     </div>
@@ -150,7 +150,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="footer">
     <h1>About Us</h1>
 
     <div class="info">

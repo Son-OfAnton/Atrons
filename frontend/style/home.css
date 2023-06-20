@@ -156,6 +156,11 @@ nav ul li a:hover {
   .search-bar {
     width: 250px;
   }
+
+  .nav-list {
+    /* gap: 40px; */
+    overflow-x: scroll;
+  }
 }
 
 @media (max-width: 728px) {
@@ -166,6 +171,11 @@ nav ul li a:hover {
 
   .search-bar {
     width: 50%;
+  }
+
+  .nav-list {
+    /* gap: 30px; */
+    overflow-x: scroll;
   }
 }
 
@@ -182,6 +192,11 @@ nav ul li a:hover {
   .search-btn {
     width: 30%;
     margin: 0 auto;
+  }
+
+  .nav-list {
+    /* gap: 20px; */
+    overflow-x: scroll;
   }
 }
 
@@ -359,10 +374,6 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* .cart-btn:hover {
-  background-color: #ea1538;
-  color: white;
-} */
 
 /* Footer */
 
