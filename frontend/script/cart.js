@@ -27,10 +27,10 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
     
         <footer class="content">
             <span class="qt-minus">-</span>
-            <span class="qt" data-isbn=${index}>0</span>
+            <span class="qt" data-isbn=${index}>1</span>
             <span class="qt-plus">+</span>
     
-            <h2 class="full-price">0birr</h2>
+            <h2 class="full-price">${item.price}birr</h2>
     
             <h2 class="price">${item.price}birr</h2>
         </footer>`;
@@ -88,7 +88,7 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
             el.parent().parent().remove();
             if ($(".product").length == 0) {
               if (check) {
-                
+                $("#cart").html("<h1>Thanks for choosing us!</h1>");
               } else {
                 $("#cart").html("<h1>No products!</h1>");
               }
@@ -104,7 +104,7 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
         .children(".qt")
        
       key.html(parseInt($(this).parent().children(".qt").html()) + 1);
-      console.log(key.dataset.isbn);
+      record[key.data('isbn')] += 1
   
       $(this).parent().children(".full-price").addClass("added");
   
@@ -120,6 +120,7 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
   
       if (parseInt(child.html()) > 1) {
         child.html(parseInt(child.html()) - 1);
+        record[child.data('isbn')] -= 1;
       }
   
       $(this).parent().children(".full-price").addClass("minused");
@@ -136,24 +137,23 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
     }, 1200);
   
     $(".btn").click(function () {
-      check = true;
-      const data = [];
-      
-      // fetch('https://example.com/api/endpoint', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify(data)
-      // })
-      // .then(response => response.json())
-      // .then(data => {
-      //   console.log(data);
-      // })
-      // .catch(error => {
-      //   console.error(error);
-      // });
-      // $(".remove").click();
+      // check = true;
+      fetch('http://localhost/Atrons/backend/api/cart/buy_book.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(record)
+      })
+      .then(response => response.json())
+      .then(data => {
+        check = data;
+        console.log(check);
+        $(".remove").click();
+      })
+      .catch(error => {
+        console.error(error);
+      });
     });
   });
 });
