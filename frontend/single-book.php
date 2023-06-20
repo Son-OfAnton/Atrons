@@ -24,7 +24,7 @@
           <h1 class="title">Atrons</h1>
         </div>
         <div class="search-wrapper">
-          <input class="search-bar" type="text" placeholder="Search By Title Or Author" />
+          <input class="search-bar" type="text" placeholder="Search By Title" />
           <button class="search-btn" type="button">Search</button>
         </div>
       </div>
@@ -33,18 +33,14 @@
 
   <section class="book-wrapper">
     <div class="book-cover-container">
-      <img class="book-cover" src="assets/newBook.jpg" />
+      <img class="book-cover" src="" />
     </div>
 
     <div class="book-details">
-      <h3 class="book-title">Chronicles of Narnia</h3>
-      <p class="book-author">CS Lewis</p>
-      <p class="book-price">100 birr</p>
+      <h3 class="book-title"></h3>
+      <p class="book-author"></p>
+      <p class="book-price"></p>
       <p class="book-description">
-        lor Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Accusantium architecto, neque nihil sint magnam maiores distinctio
-        repellendus iste obcaecati unde fugit, voluptates explicabo totam
-        excepturi magni nisi inventore, quas ipsum.
       </p>
       <button class="cart-btn">Add to cart</button>
     </div>
@@ -88,6 +84,7 @@
   </footer>
 
   <script src="./script/singleBook.js"></script>
+  <script src="./script/searchByTitle.js"></script>
   <!-- <script src="./script/cart.js"></script> -->
   <script>
     const urlParams = new URLSearchParams(window.location.search);

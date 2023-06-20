@@ -10,7 +10,7 @@ $db = $database->connect();
 
 $book = new Book($db);
 
-$target_dir = "../../../frontend/assets/";
+$target_dir = "../../../frontend/cover-img/";
 
 $uploaded = false;
 if (isset($_FILES["cover_photo"])) {
