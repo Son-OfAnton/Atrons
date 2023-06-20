@@ -33,7 +33,7 @@
         </li>
 
         <li id="categories">
-          <a href="categories.php">Categories</a>
+          <a href="#">Categories</a>
         </li>
 
         <li id="wishlist">

@@ -2,18 +2,23 @@ records = undefined;
 
 const bookAttributes = ['ISBN', 'title', 'author', 'category', 'num_copies', 'price']
 const userAttributes = ['email', 'first_name', 'last_name', 'gender', 'phone']
+const logAttributes = ['email', 'ISBN', 'purchase_date', 'amount']
 
 let currentAttribute = bookAttributes;
 let currentTable = 'book';
 
 
 const thead = document.getElementsByTagName('thead')[0];
+const heading = document.querySelector("h3");
+console.log(heading)
 
 function changeHeader(currentTable) {
     if (currentTable == 'book') {
         thead.innerHTML = "<th>ISBN</th><th>Title</th><th>Author</th><th>Category</th><th>Amount</th><th>Price</th>";
-    } else {
+    } else if(currentTable === 'user') {
         thead.innerHTML = "<th>Email</th><th>First Name</th><th>Second Name</th><th>Gender</th><th>Phone</th>";
+    } else {
+        thead.innerHTML = "<th>ISBN</th><th>Email</th><th>Amount</th><th>Purchase Date</th>";
     }
 }
 
@@ -42,24 +47,26 @@ function populateTable(Data, attributes) {
     table_body = document.getElementsByTagName('tbody')[0];
     table_body.replaceWith(document.createElement("tbody"));
     table_body = document.getElementsByTagName('tbody')[0];
+    console.log("here")
     Data.forEach(book => {
         row = document.createElement('tr');
         attributes.forEach((attribute) => {
             cell = document.createElement('td');
             
-            if (attribute=='ISBN' || attribute=='email')
+            if (attribute=='ISBN' || attribute=='email' & currentTable !== 'log')
             cell.setAttribute("onclick", "deleteRecord(event)")
-
+            var title = ''
             if (attribute == 'title') {
                 let newUrl = encodeURI(book[attribute]); 
-                console.log(newUrl);
                 url = `http://localhost/Atrons/backend/api/book/read_single.php?title=${newUrl}&message=edit`;
-                book[attribute] = `<a href=${url}> ${book[attribute]} </a>`;
+                title = `<a href=${url}> ${book[attribute]} </a>`;
             }
 
             // cell.append(book[attribute]);
-            cell.innerHTML = book[attribute];
+
+            cell.innerHTML = title ? title : book[attribute];
             row.append(cell);
+
         })
         table_body.append(row)
     });
@@ -68,17 +75,19 @@ function populateTable(Data, attributes) {
 const searchbar = document.getElementById('search');
 
 //search records by any thing
-searchbar.addEventListener('keyup', (e) => {
+searchbar.addEventListener('input', function(e) {
     if (!records) return;
     filtered = []
     for (let i = 0; i < records.length; i++) {
 
         match = false
+        console.log(match)
         for (j = 0; j < currentAttribute.length; j++) {
             key = String(records[i][currentAttribute[j]])
             key = key.toLowerCase()
             if (key.includes(e.target.value.trim().toLowerCase())) {
                match = true;
+               console.log(e.target.value, key)
                break;
             }
         }
@@ -122,10 +131,17 @@ navs.forEach(nav => {
                 currentAttribute = userAttributes;
                 getData(currentTable);
                 break;
-            default:
+            case 'book':
                 currentTable = 'book'
                 currentAttribute = bookAttributes;
-                getData(currentTable);   
+                getData(currentTable);
+                break;
+            default:
+                currentTable = 'log'
+                currentAttribute = logAttributes;
+                getData(currentTable);
+                break;
+
         }
         changeHeader(currentTable);
     })

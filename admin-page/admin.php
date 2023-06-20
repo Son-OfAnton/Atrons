@@ -14,7 +14,7 @@
         <nav>
             <ul><a id="book" href="#"><i class="fa-solid fa-book-open fa-2xs"></i>Books</a></ul>
             <ul><a id="user" href="#"><i class="fa-solid fa-users fa-2xs"></i>Users</a></ul>
-            <ul><a id="log" href="#"><i class="fa-solid fa-xs fa-plus"></i>New Book</a></ul>
+            <ul><a id="log" href="#"><i class="fa-solid fa-xs fa-plus"></i>Log</a></ul>
         </nav>
     </header>
     <main>
@@ -40,7 +40,9 @@
     
             </tbody>
         </table>
-        <button><i class="fa-solid fa-2xl fa-plus"></i></button>
+        <a href="new-book-form.php">
+            <button><i class="fa-solid fa-2xl fa-plus"></i></button>
+        </a> 
     </main>
 </body>
 <script src="script/script.js"></script>

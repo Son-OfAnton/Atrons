@@ -9,11 +9,11 @@ $.getJSON('http://localhost/Atrons/backend/api/cart/read_cart.php', function(dat
   let record = {}
   $.each(data, function(index, item) {
     let product = $("<article class='product'>");
-    record[index] = 0;
+    record[index] = 1;
     resultHtml = `
         <header>
             <a class="remove" data-isbn=${index}>
-                <img src="./assets/newBook.jpg" />
+                <img src=${item.cover_photo} />
     
                 <h3>Remove</h3>
             </a>
