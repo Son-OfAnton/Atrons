@@ -28,10 +28,8 @@ if ($result) {
 
     $query_string = http_build_query($book_arr);
 
-    echo isset($_GET['message']);
     if(isset($_GET['message'])) {
-        echo "here1";
-        // header("Location: http://localhost/Atrons/admin-page/new-book-form.php?" . $query_string);
+        header("Location: http://localhost/Atrons/admin-page/new-book-form.php?" . $query_string);
     }
 
 } else {

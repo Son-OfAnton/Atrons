@@ -31,9 +31,20 @@ if (data['isbn']) {
 const fileInput = document.getElementById('cover_photo');
 const fileLabel = document.getElementById('file');
 
+//When file is choosen write the file name to the label
 fileInput.addEventListener('change', () => {
   fileLabel.innerHTML = fileInput.files[0].name;
 });
+
+function displayError(input, err) {
+    if(input.nextElementSibling.tagName === err.tagName) {
+        input.nextElementSibling.remove()
+        // form.replaceChild(input.nextElementSibling, err)
+    }
+    
+    input.insertAdjacentElement("afterend", err)
+    input.scrollIntoView()
+}
 
 submit.addEventListener('click', (e) => {
     e.preventDefault();
@@ -50,8 +61,7 @@ submit.addEventListener('click', (e) => {
                 filled -= 1;
                 field.classList.add("error");
                 err.innerHTML = "Only numeric values allowed";
-                field.insertAdjacentElement("afterend", err);
-                err.scrollIntoView(true);
+                displayError(field, err);
             }
         }
         
@@ -59,19 +69,24 @@ submit.addEventListener('click', (e) => {
             if (field.checked) filled += 1;
         } 
         else if(field.type !== "submit" && field.type !== "reset" && field.type !== "file") {
-            if(value != '') {
+            if(value) {
                 filled += 1;
             } else {
                 field.classList.add("error");
                 err.innerHTML = "This field can't be empty";
-                field.insertAdjacentElement("afterend", err);
+                displayError(field, err);
             }
         }
+        else if(field.type == 'file' && !field.value) {
+            filled -= 1
+            err.innerHTML = "Please choose an img";
+            displayError(field, err)
+        }
 
-        field.addEventListener("keyup", (e) => {
+        field.addEventListener("keypress", (e) => {
             e.target.classList.remove("error");
-            err.style.display = 'none';
-        }, true)
+            err.remove();
+        }, {once : true})
     })
 
     if (textArea.value.trim() !== '' & filled == 6) {

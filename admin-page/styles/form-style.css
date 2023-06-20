@@ -133,7 +133,7 @@ textarea::-webkit-scrollbar {
     margin: 7px;
 }
 
-.buttons input[type="submit"],.buttons input[type="reset"] {
+.buttons input[type="submit"], .buttons input[type="reset"] {
     background-color: rgba(43, 43, 43, 0.225);
     border-radius: 7.5px;
     border: 1px solid rgba(43, 43, 43, 0.225);
@@ -146,7 +146,7 @@ textarea::-webkit-scrollbar {
 }
 
 .error {
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(243, 33, 33, 0.062);
     border:solid 1px red;   
 }
 

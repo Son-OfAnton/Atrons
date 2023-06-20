@@ -13,20 +13,13 @@ $database = new Database();
 $db = $database->connect();
 
 $cart = new Cart($db);
-
-$data = json_decode(file_get_contents("php://input"));
-
-$cart->email = $_SESSION['email'];
-$cart->ISBN = $data->ISBN;
-
-
-// Create cart
-if ($cart->add_to_cart($cart->email, $cart->ISBN)) {
-  echo json_encode(
-    array('message' => 'Book added to cart')
-  );
-} else {
-  echo json_encode(
-    array('message' => 'Failed to add book to cart')
-  );
+echo $_GET["isbn"];
+if(isset($_GET['isbn']) && isset($_SESSION['email'])) {
+    $ISBN = $_GET['isbn'];
+    if ($cart->delete_cart($ISBN, $_SESSION['email'])) {
+        echo "Successfully Deleted";
+    } else {
+        echo "Not Deleted";
+    }
 }
+

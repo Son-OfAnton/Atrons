@@ -14,19 +14,11 @@ $db = $database->connect();
 
 $cart = new Cart($db);
 
-$data = json_decode(file_get_contents("php://input"));
 
-$cart->email = $_SESSION['email'];
-$cart->ISBN = $data->ISBN;
-
-
-// Create cart
-if ($cart->add_to_cart($cart->email, $cart->ISBN)) {
-  echo json_encode(
-    array('message' => 'Book added to cart')
-  );
+if(isset($_SESSION['email'])) {
+    $data = $cart->read_cart($_SESSION['email']);
+    echo json_encode($data);
 } else {
-  echo json_encode(
-    array('message' => 'Failed to add book to cart')
-  );
+    echo "error";
+    header('Location: http://localhost/Atrons/backend/api/cart/read_cart.php');
 }

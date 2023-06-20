@@ -12,21 +12,20 @@ include_once '../../models/Cart.php';
 $database = new Database();
 $db = $database->connect();
 
+$data = json_decode(file_get_contents('php://input'), true);
+
 $cart = new Cart($db);
 
-$data = json_decode(file_get_contents("php://input"));
+$email = $_SESSION['email'];
 
-$cart->email = $_SESSION['email'];
-$cart->ISBN = $data->ISBN;
-
-
-// Create cart
-if ($cart->add_to_cart($cart->email, $cart->ISBN)) {
-  echo json_encode(
-    array('message' => 'Book added to cart')
-  );
-} else {
-  echo json_encode(
-    array('message' => 'Failed to add book to cart')
-  );
+$suc = true;
+foreach($data as $key=>$value) {
+    if(!$cart->checkout($value, $key, $email)) {   
+        $suc = false;
+        echo json_encode(false);
+    }
 }
+if ($suc) {
+    echo json_encode(true); 
+}
+
