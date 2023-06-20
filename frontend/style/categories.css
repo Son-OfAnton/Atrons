@@ -121,6 +121,54 @@ nav ul li a:hover {
   width: 350px;
 }
 
+@media (max-width: 904px) {
+  .search-bar {
+    width: 250px;
+  }
+
+  .nav-list {
+    /* gap: 40px; */
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 728px) {
+  .top-nav {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .search-bar {
+    width: 50%;
+  }
+
+  .nav-list {
+    /* gap: 30px; */
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 412px) {
+  .search-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    row-gap: 10px;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-btn {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .nav-list {
+    /* gap: 20px; */
+    overflow-x: scroll;
+  }
+}
+
 /* side bar */
 
 .sidebar {

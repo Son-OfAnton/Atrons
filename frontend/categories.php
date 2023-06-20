@@ -26,7 +26,7 @@
           <h1 class="title">Atrons</h1>
         </div>
         <div class="search-wrapper">
-          <input class="search-bar" type="text" placeholder="Search By Title Or Author" />
+          <input class="search-bar" type="text" placeholder="Search By Title" />
           <button class="search-btn" type="button">Search</button>
         </div>
       </div>
