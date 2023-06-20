@@ -18,132 +18,19 @@
         </header>
 
         <div class="container">
-            <section id="cart">
-                <article class="product">
-                    <header>
-                        <a class="remove">
-                            <img src="./assets/newBook.jpg" />
-
-                            <h3>Remove</h3>
-                        </a>
-                    </header>
-
-                    <div class="content">
-                        <h1>Mouse</h1>
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
-                        numquam quis perspiciatis ea ad omnis provident laborum dolore in
-                        atque.
-                    </div>
-
-                    <footer class="content">
-                        <span class="qt-minus">-</span>
-                        <span class="qt">2</span>
-                        <span class="qt-plus">+</span>
-
-                        <h2 class="full-price">29.98birr</h2>
-
-                        <h2 class="price">14.99birr</h2>
-                    </footer>
-                </article>
-
-                <article class="product">
-                    <header>
-                        <a class="remove">
-                            <img src="./assets/newBook.jpg" />
-
-                            <h3>Remove</h3>
-                        </a>
-                    </header>
-
-                    <div class="content">
-                        <h1>Keyboard</h1>
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
-                        numquam quis perspiciatis ea ad omnis provident laborum dolore in
-                        atque.
-                    </div>
-
-                    <footer class="content">
-                        <span class="qt-minus">-</span>
-                        <span class="qt">1</span>
-                        <span class="qt-plus">+</span>
-
-                        <h2 class="full-price">79.99birr</h2>
-
-                        <h2 class="price">79.99birr</h2>
-                    </footer>
-                </article>
-
-                <article class="product">
-                    <header>
-                        <a class="remove">
-                            <img src="./assets/newBook.jpg" />
-
-                            <h3>Remove</h3>
-                        </a>
-                    </header>
-
-                    <div class="content">
-                        <h1>Handfree</h1>
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
-                        numquam quis perspiciatis ea ad omnis provident laborum dolore in
-                        atque.
-                    </div>
-
-                    <footer class="content">
-                        <span class="qt-minus">-</span>
-                        <span class="qt">3</span>
-                        <span class="qt-plus">+</span>
-
-                        <h2 class="full-price">53.99birr</h2>
-
-                        <h2 class="price">17.99birr</h2>
-                    </footer>
-                </article>
-
-                <article class="product">
-                    <header>
-                        <a class="remove">
-                            <img src="./assets/newBook.jpg" />
-
-                            <h3>Remove</h3>
-                        </a>
-                    </header>
-
-                    <div class="content">
-                        <h1>Mouse</h1>
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
-                        numquam quis perspiciatis ea ad omnis provident laborum dolore in
-                        atque.
-                    </div>
-
-                    <footer class="content">
-                        <span class="qt-minus">-</span>
-                        <span class="qt">2</span>
-                        <span class="qt-plus">+</span>
-
-                        <h2 class="full-price">29.98birr</h2>
-
-                        <h2 class="price">14.99birr</h2>
-                    </footer>
-                </article>
-
-            </section>
+            <section id="cart"></section>
         </div>
 
         <footer id="site-footer">
             <div class="container clearfix">
                 <div class="left">
-                    <h2 class="subtotal">Subtotal: <span>163.96</span>birr</h2>
-                    <h3 class="tax">Taxes (5%): <span>8.2</span>birr</h3>
-                    <h3 class="shipping">Shipping: <span>5.00</span>birr</h3>
+                    <h2 class="subtotal">Subtotal: <span>0</span>birr</h2>
+                    <h3 class="tax">Taxes (5%): <span>0</span>birr</h3>
+                    <h3 class="shipping">Shipping: <span>0.00</span>birr</h3>
                 </div>
 
                 <div class="right">
-                    <h1 class="total">Total: <span>177.16</span>birr</h1>
+                    <h1 class="total">Total: <span>0</span>birr</h1>
                     <a class="btn">Checkout</a>
                 </div>
             </div>

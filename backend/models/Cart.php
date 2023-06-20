@@ -38,4 +38,36 @@ class Cart
             return false; // Error adding book to cart
         }
     }
+
+    public function read_cart($email) {
+        $query = "SELECT book.`ISBN`, `title`, `price`, `description`, `cover_photo` FROM cart, book where cart.ISBN = book.ISBN "
+        ."and cart.email = ? GROUP BY book.ISBN;";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $email);
+        $stmt->execute();
+        $result = $stmt;
+        $count = $result->rowCount();
+        if($count > 0) {
+            $books_arr = array();
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                $books_arr[$row['ISBN']] = array(
+                    'title'=>$row['title'],
+                    'price'=>$row['price'],
+                    'cover_photo'=>$row['cover_photo'],
+                    'description'=>$row['description'],
+                );
+            }
+            return $books_arr;
+        } else {
+            echo "<p>No books found</p>";
+        }
+    }
+
+    public function delete_cart($ISBN, $email) {
+        $query = 'DELETE from Cart WHERE ISBN = ? AND email = ?';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $ISBN);
+        $stmt->bindParam(2, $email);
+        return $stmt->execute();
+    }
 }

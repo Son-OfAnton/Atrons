@@ -29,6 +29,7 @@ if ($count > 0) {
             'price' => $price,
             'num_copies' => $num_copies,
             'category'  => $category,
+            'arrival' => $arrival,
         );
 
         array_push($books_arr['data'], $book_item);

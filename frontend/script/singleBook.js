@@ -31,11 +31,10 @@ const title = urlParams.get("title");
 // Fetch the book data and render it
 searchByTitle(title)
   .then((book) => {
-    renderBook(book);
+    renderBook(book.data);
+    const bookDetails = document.getElementsByClassName("book-details")[0];
+    bookDetails.setAttribute("id", `${book.data.isbn}`)
   })
   .catch((error) => {
     console.error("Error:", error);
   });
-
-  const bookDetails = document.getElementsByClassName("book-details");
-  bookDetails.setAttribute("id", `${book.ISBN}`)
