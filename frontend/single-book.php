@@ -88,6 +88,7 @@
   </footer>
 
   <script src="./script/singleBook.js"></script>
+  <script src="./script/searchByTitle.js"></script>
   <!-- <script src="./script/cart.js"></script> -->
   <script>
     const urlParams = new URLSearchParams(window.location.search);

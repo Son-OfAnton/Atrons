@@ -45,11 +45,16 @@ function renderCategoryCards(categoryData) {
     card.style.cursor = "pointer";
     card.classList.add("card");
 
+    const imgWrapper = document.createElement("div");
+    imgWrapper.classList.add("img-wrapper");
+
     const image = document.createElement("img");
     image.src = book.cover_photo;
     image.alt = "Book";
     image.classList.add("card-image");
-    card.appendChild(image);
+    // card.appendChild(image);
+    imgWrapper.appendChild(image);
+    card.appendChild(imgWrapper);
 
     const content = document.createElement("div");
     content.classList.add("card-content");
@@ -77,17 +82,22 @@ function renderCategoryCards(categoryData) {
     const cartButton = document.createElement("button");
     cartButton.classList.add("cart-btn");
     cartButton.textContent = "Add to cart";
-    cartButton.setAttribute("onclick", "addToCart(this)");
+    cartButton.setAttribute("onclick", "addToCart(this);");
     buttons.appendChild(cartButton);
 
     cardContainer.appendChild(card);
 
     content.addEventListener("click", function () {
-      const encodedTitle = book.title.replace(/\s/g, "%20");
+      const encodedTitle = book.title.replace(/\s+/g, "%20");
+      console.log(encodedTitle);
+      // console.log(`single-book.php?title=${encodedTitle}`);
       window.location.href = `single-book.php?title=${encodedTitle}`;
     });
     image.addEventListener("click", function () {
-      const encodedTitle = book.title.replace(/\s/g, "%20");
+      const encodedTitle = book.title.replace(/\s+/g, "%20");
+      console.log(encodedTitle);
+      // console.log(`single-book.php?title=${encodedTitle}`);
+
       window.location.href = `single-book.php?title=${encodedTitle}`;
     });
   });
@@ -107,29 +117,42 @@ function findAncestorWithId(element) {
 }
 
 function addToCart(addButton) {
-  console.log("i am clicked");
+  console.log("I am clicked");
   var apiUrl = "http://localhost/Atrons/backend/api/cart/add_to_cart.php";
   var ISBN = findAncestorWithId(addButton).getAttribute("id");
   console.log("ISBN === ", ISBN);
-  var requestData = {
-    email: "alex@example.com",
-    ISBN: `${ISBN}`,
-  };
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", apiUrl, true);
-  xhr.setRequestHeader("Content-Type", "application/json");
+  var sessionUrl = "http://localhost/Atrons/backend/api/user/get_session.php";
+  var sessionXhr = new XMLHttpRequest();
+  sessionXhr.open("GET", sessionUrl, true);
+  sessionXhr.onreadystatechange = function () {
+    if (sessionXhr.readyState === 4 && sessionXhr.status === 200) {
+      var sessionResponse = JSON.parse(sessionXhr.responseText);
+      var userEmail = sessionResponse.email;
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        var response = JSON.parse(xhr.responseText);
-        console.log(response.message); // Output the response message
-      } else {
-        console.error("Error:", xhr.status);
-      }
+      var requestData = {
+        email: userEmail,
+        ISBN: ISBN,
+      };
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", apiUrl, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            console.log(response.message); // Output the response message
+          } else {
+            console.error("Error:", xhr.status);
+          }
+        }
+      };
+
+      xhr.send(JSON.stringify(requestData));
     }
   };
 
-  xhr.send(JSON.stringify(requestData));
+  sessionXhr.send();
 }

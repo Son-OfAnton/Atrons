@@ -63,6 +63,8 @@
   </main>
 
   <script src="./script/searchByCategory.js"></script>
+  <script src="./script/searchByTitle.js"></script>
+
   <!-- <script src="./script/cart.js"></script> -->
 
 

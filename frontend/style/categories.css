@@ -211,11 +211,15 @@ nav ul li a:hover {
   border-radius: 5px;
   margin-bottom: 20px;
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-image {
-  width: 100%;
-  height: auto;
+  float: left;
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
 }
@@ -234,31 +238,20 @@ nav ul li a:hover {
 }
 
 .card-buttons {
-  /* visibility: hidden; */
-  /* opacity: 0; */
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* margin-top: 10px; */
-  /* transition: visibility 0s, opacity 0.3s ease-in-out; */
+  margin-top: auto;
 }
-
-/* .card:hover .card-buttons {
-  visibility: visible;
-  opacity: 1;
-} */
 
 .card-buttons button {
   border: none;
   outline: none;
-  /* background-color: transparent; */
   flex: 1;
   cursor: pointer;
 }
 
 .cart-btn {
-  /* background-color: white;
-  color: black; */
   background-color: #ea1538;
   color: white;
   border: 1px solid black;

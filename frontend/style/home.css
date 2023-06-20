@@ -152,6 +152,39 @@ nav ul li a:hover {
   width: 350px;
 }
 
+@media (max-width: 904px) {
+  .search-bar {
+    width: 250px;
+  }
+}
+
+@media (max-width: 728px) {
+  .top-nav {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .search-bar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 412px) {
+  .search-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    row-gap: 10px;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-btn {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
 /* Featuted books */
 
 .featured-books {
