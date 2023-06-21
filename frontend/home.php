@@ -11,9 +11,9 @@
 
 <body>
   <div class="nav-icons">
-    <a href="#">
+    <!-- <a href="#">
       <img class="nav-svgs" src="assets/person.svg" />
-    </a>
+    </a> -->
   </div>
   <nav>
     <div class="wrapper">
@@ -34,10 +34,6 @@
 
         <li id="categories">
           <a href="#">Categories</a>
-        </li>
-
-        <li id="wishlist">
-          <a href="#">Cart</a>
         </li>
 
         <li id="cart">
@@ -156,7 +152,7 @@
     <div class="info">
       <div class="centered">
         <p>4 Kilo, Addis Ababa, Ethiopia</p>
-        <p>info@atrons.com</p>
+        <p>info@Atrons.com</p>
         <p>+251900026618</p>
       </div>
 

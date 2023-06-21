@@ -52,7 +52,7 @@
     <div class="info">
       <div class="centered">
         <p>4 Kilo, Addis Ababa, Ethiopia</p>
-        <p>info@atrons.com</p>
+        <p>info@Atrons.com</p>
         <p>+251900026618</p>
       </div>
 

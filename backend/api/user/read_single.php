@@ -28,10 +28,10 @@ if ($userObj) {
 
     echo json_encode($user_arr);
     $_SESSION['email'] = $user_arr["email"];
-    
-    header('Location: http://localhost/Atrons/frontend/home.php');
-    exit;
 
+    header('Location: http://localhost/Atrons/frontend/home.php');
+
+    exit;
 } else {
     header('Location: http://localhost/Atrons/frontend/login.php?message=not found');
     exit;

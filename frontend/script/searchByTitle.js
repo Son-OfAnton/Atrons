@@ -24,10 +24,10 @@ function searchByTitle(title) {
 }
 
 searchBtn.addEventListener("click", function () {
-//   console.log("i am clicked");
+  //   console.log("i am clicked");
   const title = searchBar.value;
   const encodedTitle = title.replace(/\s+/g, "%20");
-//   console.log(encodedTitle);
+  //   console.log(encodedTitle);
   searchByTitle(encodedTitle)
     .then((book) => {
       window.location.href = `single-book.php?title=${encodedTitle}`;

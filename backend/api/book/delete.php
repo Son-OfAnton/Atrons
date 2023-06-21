@@ -16,4 +16,3 @@ $book->delete_book($ISBN);
 echo "delleted";
 header("Location: http://localhost/Atrons/admin-page/admin.php");
 exit;
-?>

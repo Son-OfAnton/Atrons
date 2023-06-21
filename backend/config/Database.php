@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-    private $host = 'localhost:3307';
+    private $host = 'localhost';
     private $db_name = 'Atrons';
     private $username = 'root';
     private $password = '';

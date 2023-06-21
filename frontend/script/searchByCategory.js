@@ -122,7 +122,7 @@ function addToCart(addButton) {
   var ISBN = findAncestorWithId(addButton).getAttribute("id");
   console.log("ISBN === ", ISBN);
 
-  var sessionUrl = "http://localhost/Atrons/backend/api/user/get_session.php";
+  var sessionUrl = "http://localhost/Atrons/backend/api/cart/add_to_cart.php";
   var sessionXhr = new XMLHttpRequest();
   sessionXhr.open("GET", sessionUrl, true);
   sessionXhr.onreadystatechange = function () {

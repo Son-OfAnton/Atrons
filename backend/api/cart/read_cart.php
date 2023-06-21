@@ -15,7 +15,7 @@ $db = $database->connect();
 $cart = new Cart($db);
 
 
-if(isset($_SESSION['email'])) {
+if (isset($_SESSION['email'])) {
     $data = $cart->read_cart($_SESSION['email']);
     echo json_encode($data);
 } else {
