@@ -11,9 +11,9 @@
 
 <body>
   <div class="nav-icons">
-    <a href="#">
+    <!-- <a href="#">
       <img class="nav-svgs" src="assets/person.svg" />
-    </a>
+    </a> -->
   </div>
   <nav>
     <div class="wrapper">
@@ -36,9 +36,9 @@
           <a href="#">Categories</a>
         </li>
 
-        <li id="wishlist">
+        <!-- <li id="wishlist">
           <a href="#">Wishlist</a>
-        </li>
+        </li> -->
 
         <li id="cart">
           <a href="cart.php">Cart</a>
@@ -72,11 +72,11 @@
 
     <div id="slider">
       <figure>
-        <img src="assets/newBook.jpg" />
-        <img src="assets/newBook.jpg" />
-        <img src="assets/newBook.jpg" />
-        <img src="assets/newBook.jpg" />
-        <img src="assets/newBook.jpg" />
+        <img src="cover-img/jurassic_park.png" />
+        <img src="cover-img/the_call_of_the_wild.jpeg" />
+        <img src="cover-img/the_hobbit.jpg" />
+        <img src="cover-img/treasure_island.jpg" />
+        <img src="cover-img/jurassic_park.png" />
       </figure>
     </div>
   </section>
@@ -86,10 +86,10 @@
 
     <div class="card-container">
       <div class="card">
-        <img src="assets/newBook.jpg" alt="Book 1" class="card-image" />
+        <img src="cover-img/the_westing_game.jpeg" alt="Book 1" class="card-image" />
         <div class="card-content">
-          <h3 class="card-title">Book Title 1</h3>
-          <p class="card-author">Author 1</p>
+          <h3 class="card-title">Treasure Island</h3>
+          <p class="card-author">Jhon Doe</p>
           <p class="card-price">$9.99</p>
           <div class="card-buttons">
             <button class="cart-btn">Add to cart</button>
@@ -98,10 +98,10 @@
       </div>
 
       <div class="card">
-        <img src="assets/newBook.jpg" alt="Book 2" class="card-image" />
+        <img src="cover-img/the_maze_runner.png" alt="Book 2" class="card-image" />
         <div class="card-content">
-          <h3 class="card-title">Book Title 2</h3>
-          <p class="card-author">Author 2</p>
+          <h3 class="card-title">The Maze Runner</h3>
+          <p class="card-author">David Parkinson</p>
           <p class="card-price">$12.99</p>
           <div class="card-buttons">
             <button class="cart-btn">Add to cart</button>
@@ -112,9 +112,9 @@
       <div class="card">
         <img src="assets/newBook.jpg" alt="Book 3" class="card-image" />
         <div class="card-content">
-          <h3 class="card-title">Book Title 3</h3>
-          <p class="card-author">Author 3</p>
-          <p class="card-price">$12.99</p>
+          <h3 class="card-title">The Book Of Narnia</h3>
+          <p class="card-author">Albert Maddison</p>
+          <p class="card-price">$20.99</p>
           <div class="card-buttons">
             <button class="cart-btn">Add to cart</button>
           </div>
@@ -122,11 +122,11 @@
       </div>
 
       <div class="card">
-        <img src="assets/newBook.jpg" alt="Book 4" class="card-image" />
+        <img src="cover-img/The_lion_the_witch_and_the_wardrobe.jpeg" alt="Book 4" class="card-image" />
         <div class="card-content">
-          <h3 class="card-title">Book Title 4</h3>
-          <p class="card-author">Author 4</p>
-          <p class="card-price">$12.99</p>
+          <h3 class="card-title">The Lion The Witch And The Wardrobe</h3>
+          <p class="card-author">Micheal Corrly</p>
+          <p class="card-price">$10</p>
 
           <div class="card-buttons">
             <button class="cart-btn">Add to cart</button>
@@ -135,11 +135,11 @@
       </div>
 
       <div class="card">
-        <img src="assets/newBook.jpg" alt="Book 5" class="card-image" />
+        <img src="cover-img/the_lightning_thief.jpg" alt="Book 5" class="card-image" />
         <div class="card-content">
-          <h3 class="card-title">Book Title 5</h3>
-          <p class="card-author">Author 5</p>
-          <p class="card-price">$12.99</p>
+          <h3 class="card-title">The Lightning Theif</h3>
+          <p class="card-author">James Crook</p>
+          <p class="card-price">$40.99</p>
 
           <div class="card-buttons">
             <button class="cart-btn">Add to cart</button>

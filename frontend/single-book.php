@@ -90,10 +90,11 @@
   <script src="./script/singleBook.js"></script>
   <!-- <script src="./script/cart.js"></script> -->
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectedCategory = urlParams.get('category');
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const selectedCategory = urlParams.get('category');
 
-    searchByTitle(selectedCategory);
+    // searchByTitle(selectedCategory);
+    // console.log("here")
   </script>
 </body>
 

@@ -10,6 +10,11 @@ $db = $database->connect();
 
 $book = new Book($db);
 
+if(isset($_GET['arrival'])) {
+    echo json_encode($book->new_arrival_books());
+    die();
+}
+
 $result = $book->get_all_books();
 $count = $result->rowCount();
 
