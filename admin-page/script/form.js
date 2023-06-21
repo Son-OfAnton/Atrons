@@ -27,7 +27,7 @@ if (data["isbn"]) {
   textArea.value = data["description"];
   form.setAttribute(
     "action",
-    "http://localhost/Atrons/backend/api/book/edit.php"
+    "http://localhost/atrons/backend/api/book/edit.php"
   );
 }
 

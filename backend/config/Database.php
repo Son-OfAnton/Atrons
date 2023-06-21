@@ -2,7 +2,7 @@
 class Database
 {
     private $host = 'localhost';
-    private $db_name = 'Atrons';
+    private $db_name = 'atrons';
     private $username = 'root';
     private $password = '';
     private $conn;

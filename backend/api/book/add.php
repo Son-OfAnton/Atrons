@@ -25,7 +25,7 @@ if (isset($_FILES["cover_photo"])) {
 
 $recorded = $book->new_book($_POST, $target_dir);
 if ($uploaded && $recorded) {
-    header("Location: http://localhost/Atrons/admin-page/admin.php");
+    header("Location: http://localhost/atrons/admin-page/admin.php");
 } else {
     echo "An Error Occured";
 }

@@ -27,7 +27,7 @@ sidebarLinks.forEach((link) => {
 async function searchByCategory(categoryName) {
   try {
     const response = await fetch(
-      `http://localhost/Atrons/backend/api/book/read_single_category.php?category=${categoryName}`
+      `http://localhost/atrons/backend/api/book/read_single_category.php?category=${categoryName}`
     );
     const data = await response.json();
     renderCategoryCards(data.data);
@@ -118,11 +118,11 @@ function findAncestorWithId(element) {
 
 function addToCart(addButton) {
   console.log("I am clicked");
-  var apiUrl = "http://localhost/Atrons/backend/api/cart/add_to_cart.php";
+  var apiUrl = "http://localhost/atrons/backend/api/cart/add_to_cart.php";
   var ISBN = findAncestorWithId(addButton).getAttribute("id");
   console.log("ISBN === ", ISBN);
 
-  var sessionUrl = "http://localhost/Atrons/backend/api/cart/add_to_cart.php";
+  var sessionUrl = "http://localhost/atrons/backend/api/cart/add_to_cart.php";
   var sessionXhr = new XMLHttpRequest();
   sessionXhr.open("GET", sessionUrl, true);
   sessionXhr.onreadystatechange = function () {

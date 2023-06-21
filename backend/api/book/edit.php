@@ -27,5 +27,5 @@ if (isset($_FILES["cover_photo"]["name"]) && $_FILES["cover_photo"]['error'] ===
 
 $updated = $book->update_info($_REQUEST);
 if ($updated) {
-    header("Location: http://localhost/Atrons/admin-page/admin.php");
+    header("Location: http://localhost/atrons/admin-page/admin.php");
 }

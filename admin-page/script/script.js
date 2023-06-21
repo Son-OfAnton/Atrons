@@ -38,7 +38,7 @@ getData(currentTable);
 async function getData(currentTable) {
   try {
     response = await fetch(
-      "http://localhost/Atrons/backend/api/" + currentTable + "/read.php"
+      "http://localhost/atrons/backend/api/" + currentTable + "/read.php"
     );
     data = await response.json();
 
@@ -70,7 +70,7 @@ function populateTable(Data, attributes) {
       var title = "";
       if (attribute == "title") {
         let newUrl = encodeURI(book[attribute]);
-        url = `http://localhost/Atrons/backend/api/book/read_single.php?title=${newUrl}&message=edit`;
+        url = `http://localhost/atrons/backend/api/book/read_single.php?title=${newUrl}&message=edit`;
         title = `<a href=${url}> ${book[attribute]} </a>`;
       }
 
@@ -114,7 +114,7 @@ function deleteRecord(event) {
   if (!confirm("Are you sure you want to delete this record?")) return;
 
   fetch(
-    "http://localhost/Atrons/backend/api/" +
+    "http://localhost/atrons/backend/api/" +
       currentTable +
       "/delete.php?" +
       field +
@@ -131,7 +131,7 @@ function editRecord(event) {
   if (!confirm("Are you sure you want to delete this record?")) return;
 
   fetch(
-    "http://localhost/Atrons/backend/api/" +
+    "http://localhost/atrons/backend/api/" +
       currentTable +
       "/edit.php?" +
       field +

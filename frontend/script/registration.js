@@ -121,7 +121,7 @@ function clearErrorMessages() {
 }
 
 function registerUser() {
-  var apiUrl = "http://localhost/Atrons/backend/api/user/register_user.php";
+  var apiUrl = "http://localhost/atrons/backend/api/user/register_user.php";
 
   var firstName = document.getElementById("first-name").value;
   var lastName = document.getElementById("last-name").value;

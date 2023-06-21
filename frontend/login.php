@@ -18,8 +18,8 @@
             <div class="pill-4 rotate-45"></div>
         </div>
 
-        <!-- <form class="login" action="http://localhost/Atrons/backend/api/user/read_single.php" method="get"> -->
-        <form class="login" action="http://localhost/Atrons/backend/api/user/read_single.php" method="get">
+        <!-- <form class="login" action="http://localhost/atrons/backend/api/user/read_single.php" method="get"> -->
+        <form class="login" action="http://localhost/atrons/backend/api/user/read_single.php" method="get">
 
             <h3 class="title">User Login</h3>
             <p id="errormessage" style="display: none">Wrong Email or Password</p>

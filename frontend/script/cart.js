@@ -3,7 +3,7 @@ var check = false;
 const cart = $("#cart")[0];
 
 $.getJSON(
-  "http://localhost/Atrons/backend/api/cart/read_cart.php",
+  "http://localhost/atrons/backend/api/cart/read_cart.php",
   function (data) {
     // data = []
     cart.innerHTML = "";
@@ -79,7 +79,7 @@ $.getJSON(
         let isbn = el[0].dataset.isbn;
 
         fetch(
-          "http://localhost/Atrons/backend/api/cart/remove_from_cart.php?isbn=" +
+          "http://localhost/atrons/backend/api/cart/remove_from_cart.php?isbn=" +
             isbn
         );
 
@@ -139,7 +139,7 @@ $.getJSON(
 
       $(".btn").click(function () {
         // check = true;
-        fetch("http://localhost/Atrons/backend/api/cart/buy_book.php", {
+        fetch("http://localhost/atrons/backend/api/cart/buy_book.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -29,11 +29,11 @@ if ($userObj) {
     echo json_encode($user_arr);
     $_SESSION['email'] = $user_arr["email"];
 
-    header('Location: http://localhost/Atrons/frontend/home.php');
+    header('Location: http://localhost/atrons/frontend/home.php');
 
     exit;
 } else {
-    header('Location: http://localhost/Atrons/frontend/login.php?message=not found');
+    header('Location: http://localhost/atrons/frontend/login.php?message=not found');
     exit;
     // echo json_encode(array('message' => 'User not found'));
 }

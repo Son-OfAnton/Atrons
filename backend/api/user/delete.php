@@ -14,5 +14,5 @@ echo $_GET["email"];
 $email = isset($_GET['email']) ? $_GET['email'] : die(json_encode(array('message' => 'Invalid title parameter')));
 $user->delete_user($email);
 
-header("Location: http://localhost/Atrons/admin-page/admin.php");
+header("Location: http://localhost/atrons/admin-page/admin.php");
 exit;

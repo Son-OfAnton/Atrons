@@ -21,7 +21,7 @@
       <div class="top-nav">
         <div class="logo-title">
           <img class="logo" src="assets/book.svg" alt="" />
-          <h1 class="title">Atrons</h1>
+          <h1 class="title">atrons</h1>
         </div>
         <div class="search-wrapper">
           <input class="search-bar" type="text" placeholder="Search By Title" />
@@ -52,7 +52,7 @@
     <div class="info">
       <div class="centered">
         <p>4 Kilo, Addis Ababa, Ethiopia</p>
-        <p>info@Atrons.com</p>
+        <p>info@atrons.com</p>
         <p>+251900026618</p>
       </div>
 

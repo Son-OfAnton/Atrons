@@ -20,5 +20,5 @@ if (isset($_SESSION['email'])) {
     echo json_encode($data);
 } else {
     echo "error";
-    header('Location: http://localhost/Atrons/backend/api/cart/read_cart.php');
+    header('Location: http://localhost/atrons/backend/api/cart/read_cart.php');
 }
