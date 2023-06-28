@@ -20,10 +20,10 @@
       <div class="top-nav">
         <div class="logo-title">
           <img class="logo" src="assets/book.svg" alt="" />
-          <h1 class="title">Atrons</h1>
+          <h1 class="title">atrons</h1>
         </div>
         <div class="search-wrapper">
-          <input class="search-bar" type="text" placeholder="Search By Title Or Author" />
+          <input class="search-bar" type="text" placeholder="Search By Title" />
           <button class="search-btn" type="button">Search</button>
         </div>
       </div>
@@ -150,7 +150,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="footer">
     <h1>About Us</h1>
 
     <div class="info">
@@ -188,6 +188,7 @@
   </footer>
   <script src="./script/home.js"></script>
   <script src="./script/searchByCategory.js"></script>
+  <script src="./script/searchByTitle.js"></script>
   <!-- <script src="./script/cart.js"></script> -->
 
 </body>

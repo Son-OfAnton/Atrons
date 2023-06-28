@@ -121,6 +121,54 @@ nav ul li a:hover {
   width: 350px;
 }
 
+@media (max-width: 904px) {
+  .search-bar {
+    width: 250px;
+  }
+
+  .nav-list {
+    /* gap: 40px; */
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 728px) {
+  .top-nav {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .search-bar {
+    width: 50%;
+  }
+
+  .nav-list {
+    /* gap: 30px; */
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 412px) {
+  .search-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    row-gap: 10px;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-btn {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .nav-list {
+    /* gap: 20px; */
+    overflow-x: scroll;
+  }
+}
+
 /* side bar */
 
 .sidebar {
@@ -211,11 +259,15 @@ nav ul li a:hover {
   border-radius: 5px;
   margin-bottom: 20px;
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-image {
-  width: 100%;
-  height: auto;
+  float: left;
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
 }
@@ -234,31 +286,20 @@ nav ul li a:hover {
 }
 
 .card-buttons {
-  /* visibility: hidden; */
-  /* opacity: 0; */
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* margin-top: 10px; */
-  /* transition: visibility 0s, opacity 0.3s ease-in-out; */
+  margin-top: auto;
 }
-
-/* .card:hover .card-buttons {
-  visibility: visible;
-  opacity: 1;
-} */
 
 .card-buttons button {
   border: none;
   outline: none;
-  /* background-color: transparent; */
   flex: 1;
   cursor: pointer;
 }
 
 .cart-btn {
-  /* background-color: white;
-  color: black; */
   background-color: #ea1538;
   color: white;
   border: 1px solid black;

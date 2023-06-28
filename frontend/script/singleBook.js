@@ -3,7 +3,7 @@ const bookCoverContainer = document.querySelector(".book-cover-container");
 
 function searchByTitle(title) {
   return fetch(
-    `http://localhost/Atrons/backend/api/book/read_single.php?title=${title}`
+    `http://localhost/atrons/backend/api/book/read_single.php?title=${title}`
   )
     .then((response) => response.json())
     .then((data) => data);

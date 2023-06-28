@@ -14,6 +14,5 @@ $book = new Book($db);
 $ISBN = isset($_GET['isbn']) ? $_GET['isbn'] : die(json_encode(array('message' => 'Invalid title parameter')));
 $book->delete_book($ISBN);
 echo "delleted";
-header("Location: http://localhost/Atrons/admin-page/admin.php");
+header("Location: http://localhost/atrons/admin-page/admin.php");
 exit;
-?>
