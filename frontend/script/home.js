@@ -1,6 +1,7 @@
 const categories = document.getElementById("categories");
 const menu = document.getElementsByClassName("mega-menu")[0];
-let hideTimeout;
+const silder = document.getElementsByTagName('figure');
+fetch('localhost/Atrons/backend/api/book/read.php?arrival=yes')
 
 categories.addEventListener("mouseenter", function () {
   clearTimeout(hideTimeout);
@@ -22,3 +23,4 @@ menu.addEventListener("mouseleave", function () {
     menu.style.display = "none";
   }, 200);
 });
+0

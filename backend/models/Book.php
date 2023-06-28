@@ -95,6 +95,21 @@ class Book
         return $stmt;
     }
 
+    public function new_arrival_books() {
+        $query = 'SELECT cover_photo FROM book ORDER BY arrival LIMIT 5;';
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        $result = $stmt;
+        if($result->rowCount() > 0) {
+            $books = array();
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                $books[] = $row['cover_photo'];
+            }
+            return $books;
+        }
+    }
+
     // Get single book by title
     public function get_single_book($title)
     {
